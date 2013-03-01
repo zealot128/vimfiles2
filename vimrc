@@ -50,6 +50,8 @@ Bundle 'tpope/vim-bundler'
 " Various editing plugins
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
+   " Parentheses, html tags surround:
+   "  * visual select:  S followed by on char or html tag
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle 'file-line'
