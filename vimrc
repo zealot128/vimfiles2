@@ -488,6 +488,7 @@ autocmd BufRead,BufNewFile *.arb set filetype=ruby
 autocmd BufRead,BufNewFile *.rabl set filetype=ruby
 autocmd BufRead,BufNewFile *.prawn set filetype=ruby
 autocmd BufRead,BufNewFile *.scss set fdm=indent
+autocmd BufNewFile,BufReadPost *.hamlbars set filetype=haml
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent shiftwidth=2 expandtab
 au BufNewFile,BufRead /etc/init/*.conf set ft=upstart
 au BufNewFile,BufRead /etc/init/*.conf set ft=upstart
