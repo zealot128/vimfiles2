@@ -14,3 +14,5 @@ nnoremap <C-b> :CtrlPBuffer<cr>
 " marks = c'
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|vendor\/gems|.\/cookbooks|.*_site\/.*'
 
+
+" let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
