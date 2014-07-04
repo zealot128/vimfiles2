@@ -146,6 +146,9 @@ Bundle "marvim"
 " Colorschemes
 Bundle "junegunn/seoul256.vim"
 Bundle 'altercation/vim-colors-solarized'
+
+Bundle 'junegunn/goyo.vim'
+Bundle 'junegunn/limelight.vim'
 " Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim
 Bundle "bling/vim-airline"
@@ -506,7 +509,7 @@ augroup END
 autocmd User Rails Rnavcommand cell app/cells -glob=**/* -suffix=_cell.rb
 autocmd User Rails Rnavcommand dec app/decorators -glob=**/* -suffix=_decorator.rb
 autocmd User Rails Rnavcommand concern  app/concerns -glob=**/*
-command Rroutes Rinitializer
+command! Rroutes Rinitializer
 " autocmd User Rails Rnavcommand routes config/ -glob=routes.rb -suffix= -default=routes.rb
 autocmd User Rails Rnavcommand api lib/empfehlungsbund_api/ -glob=*rb -suffix= -default=api.rb
 
