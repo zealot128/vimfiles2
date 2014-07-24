@@ -27,6 +27,7 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'slim-template/vim-slim'
 Bundle 'honza/dockerfile.vim'
 Bundle 'stefanoverna/vim-i18n'
+Bundle 'exu/pgsql.vim'
 " extract text from ruby views into config/locales
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'chase/vim-ansible-yaml'
@@ -515,6 +516,7 @@ autocmd User Rails Rnavcommand concern  app/concerns -glob=**/*
 command! Rroutes Rinitializer
 " autocmd User Rails Rnavcommand routes config/ -glob=routes.rb -suffix= -default=routes.rb
 autocmd User Rails Rnavcommand api lib/empfehlungsbund_api/ -glob=*rb -suffix= -default=api.rb
+au BufNewFile,BufRead *.sql setf pgsql
 
 
 " ----------------------------------------------------------------------------
