@@ -37,6 +37,8 @@ Bundle 'elixir-lang/vim-elixir'
 
 " Javascript
 Bundle "othree/javascript-libraries-syntax.vim"
+Bundle 'pangloss/vim-javascript'
+Bundle 'digitaltoad/vim-jade'
 
 " Clojure
 Bundle 'tpope/vim-fireplace'
@@ -141,7 +143,7 @@ Bundle "garbas/vim-snipmate"
 
 " F2 -> Save last macro,  F3 load last macro
 " let marvim_store = '//.vim/marvim'
-Bundle "marvim"
+" Bundle "marvim"
 
 " Colorschemes
 Bundle "junegunn/seoul256.vim"
@@ -366,7 +368,7 @@ if has("folding")
   nnoremap <space> za
   set foldenable
   set foldmethod=syntax
-  set foldlevel=1
+  set foldlevel=6
   set foldnestmax=6
   set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
 endif
