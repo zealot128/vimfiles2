@@ -1,6 +1,8 @@
 " vspilt files to the right window
 let g:netrw_altv = 1
+let g:netrw_liststyle=3
 
+map <leader>e :Explore<cr>
 " split files to the bottom window
 " let g:netrw_alto = 1
 
