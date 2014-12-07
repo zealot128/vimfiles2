@@ -12,7 +12,8 @@ nnoremap <C-b> :CtrlPBuffer<cr>
 
 " registers = cr
 " marks = c'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|vendor\/gems|.\/cookbooks|.*_site\/.*'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$|vendor\/gems|.\/cookbooks|.*_site\/.*|node_modules'
 
+let g:ctrlp_custom_ignore = '\v[\/](vendor|tmp|_site|node_modules|target|dist|bower_components)|(\.(swp|ico|git|svn))$'
 
 " let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
