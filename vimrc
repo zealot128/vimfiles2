@@ -19,7 +19,7 @@ Bundle 'elzr/vim-json'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-git'
 Bundle "tpope/vim-rails"
-Bundle "tpope/vim-rake"
+" Bundle "tpope/vim-rake"
 Bundle "kchmck/vim-coffee-script"
 Bundle "othree/html5.vim"
 Bundle "tpope/vim-liquid"
@@ -31,6 +31,8 @@ Bundle 'exu/pgsql.vim'
 " extract text from ruby views into config/locales
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'chase/vim-ansible-yaml'
+Bundle 'stephpy/vim-yaml'
+
 
 
 Bundle 'elixir-lang/vim-elixir'
@@ -109,6 +111,9 @@ Bundle 'tpope/vim-surround'
    " Parentheses, html tags surround:
    "  * visual select:  S followed by on char or html tag
 " Bundle 'skammer/vim-css-color'
+Bundle 'luochen1990/rainbow'
+Bundle 'chriskempson/base16-vim'
+   " Parenthese highlightings
 
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-visual-star-search'
@@ -149,13 +154,23 @@ Bundle "garbas/vim-snipmate"
 " Colorschemes
 Bundle "junegunn/seoul256.vim"
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'cocopon/iceberg.vim'
+Bundle 'cocopon/svss.vim'
+Bundle 'jonathanfilip/vim-lucius'
+Bundle 'daddye/soda.vim'
+Bundle 'ciaranm/inkpot'
+Bundle 'vim-scripts/summerfruit256.vim'
+Bundle 'abra/vim-abra'
+Bundle 'john2x/flatui.vim'
+Bundle "MaxSt/FlatColor"
+Bundle 'jnurmine/Zenburn'
+Bundle 'tomasr/molokai'
 
 Bundle 'junegunn/goyo.vim'
 Bundle 'junegunn/limelight.vim'
 " Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim
 Bundle "bling/vim-airline"
-Bundle "MaxSt/FlatColor"
 
 " Bundle 'rainerborene/vim-timetap'
 
@@ -237,7 +252,10 @@ endif
 let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
-colorscheme seoul256
+" colorscheme seoul256
+colorscheme Tomorrow-Night
+" colorscheme lucius
+
 "set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.
 
