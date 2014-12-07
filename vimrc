@@ -37,7 +37,6 @@ Bundle 'stephpy/vim-yaml'
 
 Bundle 'elixir-lang/vim-elixir'
 
-Bundle 'etnadji/vim-epub'
 
 " Javascript
 Bundle "othree/javascript-libraries-syntax.vim"
@@ -112,9 +111,9 @@ Bundle 'tpope/vim-surround'
    " Parentheses, html tags surround:
    "  * visual select:  S followed by on char or html tag
 " Bundle 'skammer/vim-css-color'
-Bundle 'luochen1990/rainbow'
-Bundle 'chriskempson/base16-vim'
+Bundle 'kien/rainbow_parentheses.vim'
    " Parenthese highlightings
+
 
 Bundle 'tpope/vim-unimpaired'
 Bundle 'nelstrom/vim-visual-star-search'
@@ -166,6 +165,8 @@ Bundle 'john2x/flatui.vim'
 Bundle "MaxSt/FlatColor"
 Bundle 'jnurmine/Zenburn'
 Bundle 'tomasr/molokai'
+Bundle 'luochen1990/rainbow'
+Bundle 'chriskempson/base16-vim'
 
 Bundle 'junegunn/goyo.vim'
 Bundle 'junegunn/limelight.vim'
