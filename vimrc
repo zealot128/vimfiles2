@@ -111,7 +111,8 @@ Bundle 'tpope/vim-surround'
    " Parentheses, html tags surround:
    "  * visual select:  S followed by on char or html tag
 " Bundle 'skammer/vim-css-color'
-Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'eapache/rainbow_parentheses.vim'
+
    " Parenthese highlightings
 
 
