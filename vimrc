@@ -31,7 +31,8 @@ Bundle 'exu/pgsql.vim'
 " extract text from ruby views into config/locales
 Bundle 'Glench/Vim-Jinja2-Syntax'
 Bundle 'chase/vim-ansible-yaml'
-Bundle 'stephpy/vim-yaml'
+" Bundle 'stephpy/vim-yaml'
+Bundle 'avakhov/vim-yaml'
 
 
 
@@ -168,6 +169,8 @@ Bundle 'jnurmine/Zenburn'
 Bundle 'tomasr/molokai'
 Bundle 'luochen1990/rainbow'
 Bundle 'chriskempson/base16-vim'
+Bundle 'ajh17/Spacegray.vim'
+
 
 Bundle 'junegunn/goyo.vim'
 Bundle 'junegunn/limelight.vim'
@@ -257,7 +260,7 @@ let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
 " colorscheme seoul256
-colorscheme Tomorrow-Night
+" colorscheme spacegray
 " colorscheme lucius
 
 "set colorcolumn=80    " display a line in column 80 to show you
