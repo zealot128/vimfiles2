@@ -319,7 +319,7 @@ set confirm         " Ask to save buffer instead of failing when executing
 " ----------------------------------------------------------------------------
 "  selecting text
 " ----------------------------------------------------------------------------
-set clipboard=unnamed	" Yank to the system clipboard by default
+" set clipboard=unnamed	" Yank to the system clipboard by default
 
 " ----------------------------------------------------------------------------
 "  editing text			" TODO: look at these options
