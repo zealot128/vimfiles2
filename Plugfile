@@ -1,0 +1,187 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !mkdir -p ~/.vim/autoload
+  silent !curl -fLo ~/.vim/autoload/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
+
+" Check if RVM is used -> Don't use multithreads
+redir => version_output
+silent version
+redir END
+if version_output =~ 'rvm'
+  let g:plug_threads=1
+endif
+
+call plug#begin('~/.vim/bundle')
+
+
+" Language-specific syntax files
+Plug 'vim-ruby/vim-ruby'
+Plug 'elzr/vim-json'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-rails'
+" Plug 'tpope/vim-rake'
+Plug 'kchmck/vim-coffee-script'
+Plug 'othree/html5.vim'
+Plug 'tpope/vim-liquid'
+Plug 'derekwyatt/vim-scala'
+Plug 'slim-template/vim-slim'
+Plug 'honza/dockerfile.vim'
+Plug 'stefanoverna/vim-i18n'
+Plug 'exu/pgsql.vim'
+" extract text from ruby views into config/locales
+Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'chase/vim-ansible-yaml'
+" Plug 'stephpy/vim-yaml'
+Plug 'avakhov/vim-yaml'
+Plug 'elixir-lang/vim-elixir'
+
+
+" Javascript
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'digitaltoad/vim-jade'
+
+" Clojure
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-classpath', { 'for': 'clojure' }
+Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+
+
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+" dar -> ir, ar -> ruby blocks
+Plug 'camelcasemotion'
+" vi,w
+Plug 'kana/vim-textobj-indent'
+" dai  -> i and I as Text objects for marking same indented lines
+Plug 'kana/vim-textobj-syntax'
+" day  -> y and Y: same syntax colored things
+Plug 'kana/vim-textobj-line'
+" dal, dil -> line
+Plug 'thinca/vim-textobj-between'
+" af<char>
+
+" Windows Powershell
+" Plug 'dougireton/vim-ps1'
+
+Plug 'tpope/vim-vinegar'
+" Press - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
+" All that annoying crap at the top is turned off, leaving you with nothing but a list of files. This is surprisingly disorienting, but ultimately very liberating. Press I to toggle until you adapt.
+" The oddly C-biased default sort order and file hiding is replaced with a sensible application of 'suffixes' and 'wildignore'.
+" Press . on a file to pre-populate it at the end of a : command line. This is great, for example, to quickly initiate a :grep of the file or directory under the cursor. There's also !, which starts the line off with a bang. Type !chmod +x and get :!chmod +x path/to/file.
+" Press cd or cl to :cd or :lcd to the currently edited directory.
+" Press ~ to go home.
+
+
+Plug 'tommcdo/vim-exchange'
+" cx  On the first use, define the first {motion} to exchange. On the second use, define the second {motion} and perform the exchange.
+" cxx Like cx, but use the current line.
+" X   Like cx, but for Visual mode.
+" cxc Clear any {motion} pending for exchange.
+
+" Comment plugin
+Plug 'tpope/vim-commentary'
+    " gc<MOVE>  or gcc , repeat with .
+
+" Syntax check on buffer save
+Plug 'scrooloose/syntastic'
+
+" Git plugins
+Plug 'tpope/vim-fugitive'
+    " Gdiff, Gedit Gstatus Gcommit Gremove Gmove Gread Ggrep
+Plug 'gregsexton/gitv'
+    " :Gitv  Mini-Git browser
+Plug 'tmatilai/gitolite.vim'
+
+
+" Lightweight support for Ruby's Plugr
+Plug 'tpope/vim-bundler'
+    " :Plug, which wraps bundle.
+    " An internalized version of bundle open: :Bopen (and :Bsplit, :Btabedit, etc.).
+    " 'path' and 'tags' are automatically altered to include all gems from your bundle. (Generate those tags with gem-ctags!)
+    " Highlight Plugr keywords in Gemfile.
+    " Support for gf in Gemfile.lock, plus syntax highlighting that distinguishes between installed and missing gems.
+
+
+" Various editing plugins
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+   " Parentheses, html tags surround:
+   "  * visual select:  S followed by on char or html tag
+" Plug 'skammer/vim-css-color'
+Plug 'eapache/rainbow_parentheses.vim'
+
+   " Parenthese highlightings
+
+
+Plug 'tpope/vim-unimpaired'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'file-line'
+Plug 'ZoomWin'
+    " Press <c-w>o : the current window zooms into a full screen
+    " Press <c-w>o again: the previous set of windows is restored
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-endwise'
+Plug 'godlygeek/tabular'
+    " Align Text with:
+    " :Tabularize /,
+
+" File managers/explorers
+Plug 'kien/ctrlp.vim'
+Plug 'JazzCore/ctrlp-cmatcher'
+Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-eunuch'
+    " :Unlink: Delete a buffer and the file on disk simultaneously.
+    " :Remove: Like :Unlink, but doesn't require a neckbeard.
+    " :Move: Rename a buffer and the file on disk simultaneously.
+    " :Chmod: Change the permissions of the current file.
+    " :Find: Run find and load the results into the quickfix list.
+    " :Locate: Run locate and load the results into the quickfix list.
+    " :SudoWrite: Write a privileged file with sudo.
+    " :W: Write every open window. Handy for kicking off tools like guard.
+
+" Snippets and Dependencies
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+
+" F2 -> Save last macro,  F3 load last macro
+" let marvim_store = '//.vim/marvim'
+" Plug 'marvim'
+
+" Colorschemes
+Plug 'junegunn/seoul256.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'cocopon/iceberg.vim'
+Plug 'cocopon/svss.vim'
+Plug 'jonathanfilip/vim-lucius'
+Plug 'daddye/soda.vim'
+Plug 'ciaranm/inkpot'
+Plug 'vim-scripts/summerfruit256.vim'
+Plug 'abra/vim-abra'
+Plug 'john2x/flatui.vim'
+Plug 'MaxSt/FlatColor'
+Plug 'jnurmine/Zenburn'
+Plug 'tomasr/molokai'
+Plug 'luochen1990/rainbow'
+Plug 'chriskempson/base16-vim'
+Plug 'ajh17/Spacegray.vim'
+
+
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+" Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" set rtp+={path}/powerline/bindings/vim
+Plug 'bling/vim-airline'
+
+" Plug 'rainerborene/vim-timetap'
+
+Plug 'plist.vim'
+
+call plug#end()
+" vim: ft=vim
