@@ -23,6 +23,7 @@ Plug 'elzr/vim-json'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-rails'
+Plug 'timcharper/textile.vim'
 " Plug 'tpope/vim-rake'
 Plug 'kchmck/vim-coffee-script'
 Plug 'othree/html5.vim'
@@ -82,6 +83,12 @@ Plug 'tommcdo/vim-exchange'
 " cxx Like cx, but use the current line.
 " X   Like cx, but for Visual mode.
 " cxc Clear any {motion} pending for exchange.
+"
+Plug 'AndrewRadev/sideways.vim'
+" perform daa to delete an argument, cia to change an argument, and so on.
+" nnoremap <c-h> :SidewaysLeft<cr>
+" nnoremap <c-l> :SidewaysRight<cr>
+
 
 " Comment plugin
 Plug 'tpope/vim-commentary'
