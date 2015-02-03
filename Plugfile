@@ -32,6 +32,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'slim-template/vim-slim'
 Plug 'honza/dockerfile.vim'
 Plug 'stefanoverna/vim-i18n'
+Plug 'groenewege/vim-less'
 Plug 'exu/pgsql.vim'
 " extract text from ruby views into config/locales
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -39,6 +40,8 @@ Plug 'chase/vim-ansible-yaml'
 " Plug 'stephpy/vim-yaml'
 Plug 'avakhov/vim-yaml'
 Plug 'elixir-lang/vim-elixir'
+
+Plug 'SyntaxRange'
 
 
 " Javascript
