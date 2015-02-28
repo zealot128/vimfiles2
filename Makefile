@@ -1,7 +1,4 @@
-.PHONY : bundle ubuntu vim_source symlink vundle install
-
-bundle:
-	vim +BundleInstall +qall
+.PHONY : ubuntu vim_source symlink install
 
 ubuntu:
 	sudo apt-get install libncurses-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev ruby-dev python-dev git-core
@@ -20,10 +17,6 @@ symlink:
 	-ln -s ~/.vim/vimrc ~/.vimrc
 	-ln -s ~/.vim/gvimrc ~/.gvimrc
 
-vundle:
-	mkdir -p ~/.vim/bundle
-	-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
 neovim:
 	-ln -s ~/.vim ~/.nvim
 	-ln -s ~/.vimrc ~/.nvimrc
@@ -32,5 +25,5 @@ update:
 	git pull origin master
 	nvim -c ':PlugUpdate'
 
-install : symlink vundle bundle neovim
+install : symlink neovim
 
