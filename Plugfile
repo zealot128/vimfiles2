@@ -101,6 +101,9 @@ Plug 'tpope/vim-commentary'
 
 " Syntax check on buffer save
 Plug 'scrooloose/syntastic'
+if has('nvim')
+  Plug 'benekastah/neomake'
+end
 
 " Git plugins
 Plug 'tpope/vim-fugitive'
