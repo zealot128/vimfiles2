@@ -169,7 +169,9 @@ set backspace=2
 
 " Backspace Problem where ^? insertet
 set t_kb=
-fixdel
+if !has('nvim')
+  fixdel
+end
 
 if v:version > 7.03 || v:version == 7.03 && has("patch541")
   "set formatoptions+=j 	" delete comment char on second line when

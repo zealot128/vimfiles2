@@ -24,6 +24,10 @@ vundle:
 	mkdir -p ~/.vim/bundle
 	-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
+neovim:
+	-ln -s ~/.vim ~/.nvim
+	-ln -s ~/.vimrc ~/.nvimrc
 
-install : symlink vundle bundle
+
+install : symlink vundle bundle neovim
 

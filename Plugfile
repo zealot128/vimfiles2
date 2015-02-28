@@ -6,13 +6,15 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 
-" Check if RVM is used -> Don't use multithreads
-redir => version_output
-silent version
-redir END
-if version_output =~ 'rvm'
-  let g:plug_threads=1
-endif
+if !has('nvim')
+  " Check if RVM is used -> Don't use multithreads
+  redir => version_output
+  silent version
+  redir END
+  if version_output =~ 'rvm'
+    let g:plug_threads=1
+  endif
+end
 
 call plug#begin('~/.vim/bundle')
 
