@@ -28,6 +28,9 @@ neovim:
 	-ln -s ~/.vim ~/.nvim
 	-ln -s ~/.vimrc ~/.nvimrc
 
+update:
+	git pull origin master
+	nvim -c ':PlugUpdate'
 
 install : symlink vundle bundle neovim
 
