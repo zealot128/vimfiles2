@@ -358,6 +358,7 @@ autocmd User Rails Rnavcommand concern  app/concerns -glob=**/*
 command! Rroutes Rinitializer
 " autocmd User Rails Rnavcommand routes config/ -glob=routes.rb -suffix= -default=routes.rb
 autocmd User Rails Rnavcommand api lib/empfehlungsbund_api/ -glob=*rb -suffix= -default=api.rb
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 au BufNewFile,BufRead *.sql setf pgsql
 augroup plist
   " Delete existing commands (avoid problems if this file is sourced twice)
