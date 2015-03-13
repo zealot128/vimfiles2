@@ -186,6 +186,9 @@ Plug 'tomasr/molokai'
 Plug 'luochen1990/rainbow'
 Plug 'chriskempson/base16-vim'
 Plug 'ajh17/Spacegray.vim'
+Plug 'scwood/vim-hybrid'
+Plug 'romainl/Apprentice'
+Plug 'gosukiwi/vim-atom-dark'
 
 
 Plug 'junegunn/goyo.vim'
@@ -193,6 +196,7 @@ Plug 'junegunn/limelight.vim'
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim
 Plug 'bling/vim-airline'
+Plug 'majutsushi/tagbar'
 
 " Plug 'rainerborene/vim-timetap'
 
