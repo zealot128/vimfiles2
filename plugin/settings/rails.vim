@@ -13,6 +13,13 @@ let g:rails_projections = {
 \   "related": "app/models/%s.rb",
 \   "template": "class %S\n\n  def run\n  end\nend"
 \ },
+\ "app/serializers/*_serializer.rb": {
+\   "command": "serializer",
+\   "affinity": "model",
+\   "test": "spec/serializers/%s_spec.rb",
+\   "related": "app/models/%s.rb",
+\   "template": "class %S < ActiveModel::Serializer\n\n  embed ids:, include: true\n\n  attribute :id\nend"
+\ },
 \ "app/admin/*.rb": {
 \   "command": "admin",
 \   "affinity": "model",

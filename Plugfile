@@ -48,12 +48,21 @@ Plug 'SyntaxRange'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'digitaltoad/vim-jade'
+Plug 'mxw/vim-jsx'
+Plug 'dsawardekar/portkey' " Preq for ember.vim
+Plug 'dsawardekar/ember.vim'
+Plug 'mustache/vim-mustache-handlebars'
 
 " Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-classpath', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 
+
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+" Typescript Syntax completion
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
 
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -127,6 +136,9 @@ Plug 'eapache/rainbow_parentheses.vim'
 
    " Parenthese highlightings
 
+Plug 'mattn/emmet-vim'
+" HTML Zen mode, html:5 [C-y] + [,]
+"   <c-y>a  -> Aus einer URL einen <a href machen
 
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
