@@ -28,6 +28,7 @@ let g:rails_projections = {
 \   "ActiveAdmin.register %S do\n\n  # form do |f|\n   # f.inputs do\n   # end\n   # f.actions\n  # end\n\n  #menu parent: '', label: ''\n\n  # index do\n  #default_actions\n  # end\n\nend\n"
 \ },
 \ "config/*.rb": { "command": "config"  },
+\ "api/api/*.rb": { "command": "api"  },
 \ "spec/support/*.rb": {"command": "support"},
 \ "spec/features/*_spec.rb": {
 \   "command": "feature",

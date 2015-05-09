@@ -76,7 +76,8 @@ endif
 let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
-colorscheme seoul256
+" colorscheme seoul256
+colorscheme hybrid
 " colorscheme spacegray
 " colorscheme lucius
 
@@ -169,7 +170,9 @@ set backspace=2
 
 " Backspace Problem where ^? insertet
 set t_kb=
-fixdel
+if !has('nvim')
+  fixdel
+end
 
 if v:version > 7.03 || v:version == 7.03 && has("patch541")
   "set formatoptions+=j 	" delete comment char on second line when
@@ -239,6 +242,7 @@ nnoremap <F3> :nohls<CR>
 nnoremap [1;5C gt
 nnoremap [1;5D gT
 nnoremap [H gt
+map <F5> :redraw!<CR>
 
 " Fixing screen Problems
 map OH <Home>
@@ -355,9 +359,10 @@ augroup END
 autocmd User Rails Rnavcommand cell app/cells -glob=**/* -suffix=_cell.rb
 autocmd User Rails Rnavcommand dec app/decorators -glob=**/* -suffix=_decorator.rb
 autocmd User Rails Rnavcommand concern  app/concerns -glob=**/*
-command! Rroutes Rinitializer
+command! Eroutes Einitializer
+command! Rroutes Einitializer
 " autocmd User Rails Rnavcommand routes config/ -glob=routes.rb -suffix= -default=routes.rb
-autocmd User Rails Rnavcommand api lib/empfehlungsbund_api/ -glob=*rb -suffix= -default=api.rb
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 au BufNewFile,BufRead *.sql setf pgsql
 augroup plist
   " Delete existing commands (avoid problems if this file is sourced twice)
