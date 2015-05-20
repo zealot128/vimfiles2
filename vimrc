@@ -1,4 +1,157 @@
 source ~/.vim/Plugfile
+" ----------------------------------------------------------------------------
+"  Vundle setup
+" ----------------------------------------------------------------------------
+filetype off 			" Required for Vundle
+
+set rtp+=~/.vim/bundle/vundle/	" Add vundle to the RuntimePath
+call vundle#rc()
+
+
+" Let Vundle manage Vundle. Required!
+Bundle 'gmarik/vundle'
+  " :BundleInstall        -> install all Bundle vom vimrc
+  " :BundleInstall <TAB>  -> displays known scripts
+  " :BundleSearch
+
+" Language-specific syntax files
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'elzr/vim-json'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-git'
+Bundle "tpope/vim-rails"
+Bundle "tpope/vim-rake"
+Bundle "kchmck/vim-coffee-script"
+Bundle "othree/html5.vim"
+Bundle "tpope/vim-liquid"
+Bundle 'derekwyatt/vim-scala'
+Bundle 'slim-template/vim-slim'
+Bundle 'honza/dockerfile.vim'
+Bundle 'stefanoverna/vim-i18n'
+Bundle 'Glench/Vim-Jinja2-Syntax'
+
+  " extract text from ruby views into config/locales
+
+Bundle 'elixir-lang/vim-elixir'
+
+
+" Javascript
+Bundle "othree/javascript-libraries-syntax.vim"
+
+" Clojure
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+
+
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+" dar -> ir, ar -> ruby blocks
+Bundle 'camelcasemotion'
+" vi,w
+Bundle 'kana/vim-textobj-indent'
+" dai  -> i and I as Text objects for marking same indented lines
+Bundle 'kana/vim-textobj-syntax'
+" day  -> y and Y: same syntax colored things
+Bundle 'kana/vim-textobj-line'
+" dal, dil -> line
+Bundle 'thinca/vim-textobj-between'
+" af<char>
+
+" Windows Powershell
+" Bundle 'dougireton/vim-ps1'
+
+Bundle 'tpope/vim-vinegar'
+" Press - in any buffer to hop up to the directory listing and seek to the file you just came from. Keep bouncing to go up, up, up. Having rapid directory access available changes everything.
+" All that annoying crap at the top is turned off, leaving you with nothing but a list of files. This is surprisingly disorienting, but ultimately very liberating. Press I to toggle until you adapt.
+" The oddly C-biased default sort order and file hiding is replaced with a sensible application of 'suffixes' and 'wildignore'.
+" Press . on a file to pre-populate it at the end of a : command line. This is great, for example, to quickly initiate a :grep of the file or directory under the cursor. There's also !, which starts the line off with a bang. Type !chmod +x and get :!chmod +x path/to/file.
+" Press cd or cl to :cd or :lcd to the currently edited directory.
+" Press ~ to go home.
+
+
+
+" Comment plugin
+Bundle 'tpope/vim-commentary'
+    " gc<MOVE>  or gcc , repeat with .
+
+" Syntax check on buffer save
+Bundle 'scrooloose/syntastic'
+
+" Git plugins
+Bundle 'tpope/vim-fugitive'
+    " Gdiff, Gedit Gstatus Gcommit Gremove Gmove Gread Ggrep
+Bundle 'gregsexton/gitv'
+    " :Gitv  Mini-Git browser
+Bundle 'tmatilai/gitolite.vim'
+
+
+" Lightweight support for Ruby's Bundler
+Bundle 'tpope/vim-bundler'
+    " :Bundle, which wraps bundle.
+    " An internalized version of bundle open: :Bopen (and :Bsplit, :Btabedit, etc.).
+    " 'path' and 'tags' are automatically altered to include all gems from your bundle. (Generate those tags with gem-ctags!)
+    " Highlight Bundler keywords in Gemfile.
+    " Support for gf in Gemfile.lock, plus syntax highlighting that distinguishes between installed and missing gems.
+
+
+" Various editing plugins
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+   " Parentheses, html tags surround:
+   "  * visual select:  S followed by on char or html tag
+" Bundle 'skammer/vim-css-color'
+Bundle 'jondkinney/dragvisuals.vim'
+
+Bundle 'tpope/vim-unimpaired'
+Bundle 'nelstrom/vim-visual-star-search'
+Bundle 'file-line'
+Bundle 'ZoomWin'
+    " Press <c-w>o : the current window zooms into a full screen
+    " Press <c-w>o again: the previous set of windows is restored
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-endwise'
+Bundle 'godlygeek/tabular'
+    " Align Text with:
+    " :Tabularize /,
+
+" File managers/explorers
+Bundle 'kien/ctrlp.vim'
+Bundle 'mileszs/ack.vim'
+Bundle "tpope/vim-eunuch"
+    " :Unlink: Delete a buffer and the file on disk simultaneously.
+    " :Remove: Like :Unlink, but doesn't require a neckbeard.
+    " :Move: Rename a buffer and the file on disk simultaneously.
+    " :Chmod: Change the permissions of the current file.
+    " :Find: Run find and load the results into the quickfix list.
+    " :Locate: Run locate and load the results into the quickfix list.
+    " :SudoWrite: Write a privileged file with sudo.
+    " :W: Write every open window. Handy for kicking off tools like guard.
+
+" Snippets and Dependencies
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+
+" F2 -> Save last macro,  F3 load last macro
+" let marvim_store = '//.vim/marvim'
+Bundle "marvim"
+
+" Colorschemes
+Bundle "junegunn/seoul256.vim"
+Bundle 'altercation/vim-colors-solarized'
+" Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" set rtp+={path}/powerline/bindings/vim
+Bundle "bling/vim-airline"
+Bundle "MaxSt/FlatColor"
+
+" Bundle 'rainerborene/vim-timetap'
+
+
+" Faked Clipboard for tmux
+Bundle "fakeclip"
+
+
 " Inline GIT Stuff in number list, like modified lines ~ slow
 " Plug 'airblade/vim-gitgutter'
 
@@ -447,4 +600,5 @@ endif
 set exrc
 set secure
 
-
+set cursorcolumn
+set cursorline
