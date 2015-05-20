@@ -13,6 +13,13 @@ let g:rails_projections = {
 \   "related": "app/models/%s.rb",
 \   "template": "class %S\n\n  def run\n  end\nend"
 \ },
+\ "app/serializers/*_serializer.rb": {
+\   "command": "serializer",
+\   "affinity": "model",
+\   "test": "spec/serializers/%s_spec.rb",
+\   "related": "app/models/%s.rb",
+\   "template": "class %S < ActiveModel::Serializer\n\n  embed ids:, include: true\n\n  attribute :id\nend"
+\ },
 \ "app/admin/*.rb": {
 \   "command": "admin",
 \   "affinity": "model",
@@ -21,6 +28,7 @@ let g:rails_projections = {
 \   "ActiveAdmin.register %S do\n\n  # form do |f|\n   # f.inputs do\n   # end\n   # f.actions\n  # end\n\n  #menu parent: '', label: ''\n\n  # index do\n  #default_actions\n  # end\n\nend\n"
 \ },
 \ "config/*.rb": { "command": "config"  },
+\ "api/api/*.rb": { "command": "api"  },
 \ "spec/support/*.rb": {"command": "support"},
 \ "spec/features/*_spec.rb": {
 \   "command": "feature",

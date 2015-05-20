@@ -14,6 +14,9 @@ if !has('nvim')
   if version_output =~ 'rvm'
     let g:plug_threads=1
   endif
+else
+  let g:plug_threads=16
+
 end
 
 call plug#begin('~/.vim/bundle')
@@ -50,12 +53,21 @@ Plug 'SyntaxRange'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'digitaltoad/vim-jade'
+Plug 'mxw/vim-jsx'
+Plug 'dsawardekar/portkey' " Preq for ember.vim
+Plug 'dsawardekar/ember.vim'
+Plug 'mustache/vim-mustache-handlebars'
 
 " Clojure
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-classpath', { 'for': 'clojure' }
 Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
 
+
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+" Typescript Syntax completion
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
 
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -132,13 +144,19 @@ Plug 'eapache/rainbow_parentheses.vim'
 
    " Parenthese highlightings
 
+Plug 'mattn/emmet-vim'
+" HTML Zen mode, html:5 [C-y] + [,]
+"   <c-y>a  -> Aus einer URL einen <a href machen
 
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
 Plug 'file-line'
-Plug 'ZoomWin'
+
+if !has('nvim')
+  Plug 'ZoomWin'
     " Press <c-w>o : the current window zooms into a full screen
     " Press <c-w>o again: the previous set of windows is restored
+endif
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-endwise'
 Plug 'godlygeek/tabular'
@@ -186,6 +204,9 @@ Plug 'tomasr/molokai'
 Plug 'luochen1990/rainbow'
 Plug 'chriskempson/base16-vim'
 Plug 'ajh17/Spacegray.vim'
+Plug 'scwood/vim-hybrid'
+Plug 'romainl/Apprentice'
+Plug 'gosukiwi/vim-atom-dark'
 
 
 Plug 'junegunn/goyo.vim'
@@ -193,6 +214,7 @@ Plug 'junegunn/limelight.vim'
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim
 Plug 'bling/vim-airline'
+Plug 'majutsushi/tagbar'
 
 " Plug 'rainerborene/vim-timetap'
 
