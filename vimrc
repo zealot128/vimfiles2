@@ -1,4 +1,5 @@
 source ~/.vim/Plugfile
+
 " Inline GIT Stuff in number list, like modified lines ~ slow
 " Plug 'airblade/vim-gitgutter'
 
@@ -426,12 +427,6 @@ augroup plist
 augroup END
 
 
-" ----------------------------------------------------------------------------
-" Allow overriding these settings
-" ----------------------------------------------------------------------------
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
  " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
  " set rtp+={path}/powerline/bindings/vim
 
@@ -449,4 +444,6 @@ endif
 set exrc
 set secure
 
-
+if !empty(glob('~/.vim/custom.vimrc'))
+  source ~/.vim/custom.vimrc
+endif
