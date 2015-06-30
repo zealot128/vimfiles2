@@ -207,6 +207,13 @@ Plug 'ajh17/Spacegray.vim'
 Plug 'scwood/vim-hybrid'
 Plug 'romainl/Apprentice'
 Plug 'gosukiwi/vim-atom-dark'
+Plug 'whatyouhide/vim-gotham'
+Plug 'nice/sweater'
+Plug 'MichaelMalick/vim-colors-bluedrake'
+Plug 'vim-scripts/beauty256'
+Plug 'nemesit/vim-colors-fukurokujopro'
+
+
 
 
 Plug 'junegunn/goyo.vim'
