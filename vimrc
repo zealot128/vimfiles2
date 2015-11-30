@@ -245,6 +245,7 @@ nnoremap [1;5D gT
 nnoremap [H gt
 map <F5> :redraw!<CR>
 
+
 " Fixing screen Problems
 map OH <Home>
 map OF <End>
