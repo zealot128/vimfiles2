@@ -127,7 +127,7 @@ Plug 'tmatilai/gitolite.vim'
 
 
 " Lightweight support for Ruby's Plugr
-" Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-bundler'
     " :Plug, which wraps bundle.
     " An internalized version of bundle open: :Bopen (and :Bsplit, :Btabedit, etc.).
     " 'path' and 'tags' are automatically altered to include all gems from your bundle. (Generate those tags with gem-ctags!)
