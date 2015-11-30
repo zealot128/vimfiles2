@@ -1,3 +1,4 @@
 bundle/
 .netrwhist
 custom.vimrc
+fzf
