@@ -25,3 +25,4 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:40'
 
 
 nnoremap <C-f> :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
