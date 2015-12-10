@@ -78,8 +78,12 @@ let g:solarized_termcolors=256
 set t_Co=256
 set background=dark
 " colorscheme seoul256
-colorscheme hybrid
+" colorscheme hybrid
+" colorscheme atom-dark-256
 " colorscheme spacegray
+" colorscheme coffee
+" colorscheme fu
+colorscheme obsidian
 " colorscheme lucius
 
 "set colorcolumn=80    " display a line in column 80 to show you

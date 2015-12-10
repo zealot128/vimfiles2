@@ -189,29 +189,19 @@ Plug 'garbas/vim-snipmate'
 " Plug 'marvim'
 
 " Colorschemes
-Plug 'junegunn/seoul256.vim'
+"
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'flazz/vim-colorschemes'
+" :RandomColorscheme
+
 Plug 'altercation/vim-colors-solarized'
-Plug 'cocopon/iceberg.vim'
 Plug 'cocopon/svss.vim'
-Plug 'jonathanfilip/vim-lucius'
 Plug 'daddye/soda.vim'
-Plug 'ciaranm/inkpot'
-Plug 'vim-scripts/summerfruit256.vim'
-Plug 'abra/vim-abra'
-Plug 'john2x/flatui.vim'
-Plug 'MaxSt/FlatColor'
-Plug 'jnurmine/Zenburn'
-Plug 'tomasr/molokai'
-Plug 'luochen1990/rainbow'
-Plug 'chriskempson/base16-vim'
+"Plug 'chriskempson/base16-vim'
 Plug 'ajh17/Spacegray.vim'
-Plug 'scwood/vim-hybrid'
-Plug 'romainl/Apprentice'
 Plug 'gosukiwi/vim-atom-dark'
-Plug 'whatyouhide/vim-gotham'
 Plug 'nice/sweater'
-Plug 'MichaelMalick/vim-colors-bluedrake'
-Plug 'vim-scripts/beauty256'
 Plug 'nemesit/vim-colors-fukurokujopro'
 
 
