@@ -2,3 +2,4 @@ bundle/
 .netrwhist
 custom.vimrc
 fzf
+init.vim

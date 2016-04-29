@@ -23,52 +23,26 @@ call plug#begin('~/.vim/bundle')
 
 
 " Language-specific syntax files
-Plug 'vim-ruby/vim-ruby'
+" Plug 'vim-ruby/vim-ruby'
 Plug 'elzr/vim-json'
-Plug 'tpope/vim-markdown'
+" Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-rails'
-Plug 'timcharper/textile.vim'
-" Plug 'tpope/vim-rake'
-Plug 'kchmck/vim-coffee-script'
-Plug 'othree/html5.vim'
-Plug 'tpope/vim-liquid'
-Plug 'derekwyatt/vim-scala'
-Plug 'slim-template/vim-slim'
-Plug 'honza/dockerfile.vim'
-" Plug 'stefanoverna/vim-i18n'
-Plug 'groenewege/vim-less'
 Plug 'exu/pgsql.vim'
-" extract text from ruby views into config/locales
-Plug 'Glench/Vim-Jinja2-Syntax'
-" Plug 'chase/vim-ansible-yaml'
-Plug 'pearofducks/ansible-vim'
-" Plug 'stephpy/vim-yaml'
 Plug 'avakhov/vim-yaml'
-Plug 'elixir-lang/vim-elixir'
 
 Plug 'SyntaxRange'
 
 
 " Javascript
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'digitaltoad/vim-jade'
-Plug 'mxw/vim-jsx'
 Plug 'dsawardekar/portkey' " Preq for ember.vim
-Plug 'dsawardekar/ember.vim'
-Plug 'mustache/vim-mustache-handlebars'
-
-" Clojure
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
-Plug 'tpope/vim-classpath', { 'for': 'clojure' }
-Plug 'guns/vim-clojure-static', { 'for': 'clojure' }
+Plug 'sheerun/vim-polyglot'
 
 
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Typescript Syntax completion
-Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
+" Plug 'Quramy/tsuquyomi'
 
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
