@@ -1,3 +1,4 @@
+XDG_CONFIG_HOME ?= $(HOME)/.config
 .PHONY : ubuntu vim_source symlink install
 
 ubuntu:
@@ -18,8 +19,11 @@ symlink:
 	-ln -s ~/.vim/gvimrc ~/.gvimrc
 
 neovim:
-	-ln -s ~/.vim ~/.nvim
-	-ln -s ~/.vimrc ~/.nvimrc
+	-ln -sf ~/.vim ~/.nvim
+	-ln -sf ~/.vimrc ~/.nvimrc
+	-mkdir -p ${XDG_CONFIG_HOME}
+	-ln -sf ~/.vim ${XDG_CONFIG_HOME}/nvim
+	-ln -sf ~/.vimrc ${XDG_CONFIG_HOME}/nvim/init.vim
 
 update:
 	git pull origin master
