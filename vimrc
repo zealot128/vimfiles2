@@ -1,5 +1,18 @@
 source ~/.vim/Plugfile
 
+if has('nvim')
+  " Run NeoMake on read and write operations
+  autocmd! BufReadPost,BufWritePost * Neomake
+  "
+  " Disable inherited syntastic
+  let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": [] }
+  let g:neomake_serialize = 1
+  let g:neomake_serialize_abort_on_error = 1
+endif
+
 " Inline GIT Stuff in number list, like modified lines ~ slow
 " Plug 'airblade/vim-gitgutter'
 
@@ -81,10 +94,11 @@ set background=dark
 " colorscheme hybrid
 " colorscheme atom-dark-256
 " colorscheme spacegray
-" colorscheme coffee
 " colorscheme fu
-colorscheme obsidian
+" colorscheme obsidian
 " colorscheme lucius
+" colorscheme Monokai
+colorscheme Tomorrow-Night
 
 "set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.
