@@ -3,6 +3,8 @@ source ~/.vim/Plugfile
 if has('nvim')
   " Run NeoMake on read and write operations
   autocmd! BufReadPost,BufWritePost * Neomake
+
+  let g:neomake_warning_sign = {'text': 'w', 'texthl': 'NeomakeWarningSign'}
   "
   " Disable inherited syntastic
   let g:syntastic_mode_map = {
