@@ -39,6 +39,9 @@ Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'dsawardekar/portkey' " Preq for ember.vim
 Plug 'sheerun/vim-polyglot'
 
+Plug 'hsanson/vim-android'
+
+
 
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Typescript Syntax completion
