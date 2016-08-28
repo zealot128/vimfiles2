@@ -2,6 +2,7 @@ source ~/.vim/Plugfile
 
 if has('nvim')
   " Run NeoMake on read and write operations
+  set termguicolors
   autocmd! BufReadPost,BufWritePost * Neomake
 
   let g:neomake_warning_sign = {'text': 'w', 'texthl': 'NeomakeWarningSign'}
@@ -100,7 +101,8 @@ set background=dark
 " colorscheme obsidian
 " colorscheme lucius
 " colorscheme Monokai
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme tender
 
 "set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.

@@ -172,10 +172,13 @@ Plug 'garbas/vim-snipmate'
 "
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-colorscheme-switcher'
-Plug 'flazz/vim-colorschemes'
 " :RandomColorscheme
+Plug 'flazz/vim-colorschemes'
 
-Plug 'altercation/vim-colors-solarized'
+" True Color Colorschemes
+Plug 'jacoborus/tender'
+
+"Plug 'altercation/vim-colors-solarized'
 Plug 'cocopon/svss.vim'
 Plug 'daddye/soda.vim'
 "Plug 'chriskempson/base16-vim'
