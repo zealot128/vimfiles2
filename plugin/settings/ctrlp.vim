@@ -1,9 +1,14 @@
 " keymappings for Ctrl-P
-nnoremap <leader>cf :CtrlP<cr>
-nnoremap <leader>cb :CtrlPBuffer<cr>
-nnoremap <leader>cm :CtrlPMRU<cr>
 nnoremap <C-t> :CtrlPMixed<cr>
 nnoremap <C-b> :CtrlPBuffer<cr>
+
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 " tags = ct
 " directory = cd

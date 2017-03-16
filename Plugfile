@@ -144,7 +144,9 @@ Plug 'godlygeek/tabular'
 Plug 'kien/ctrlp.vim'
 Plug 'JazzCore/ctrlp-cmatcher'
 Plug 'mileszs/ack.vim'
+" :Ack <SEARCH>
 Plug 'rking/ag.vim'
+" :Ag <SEARCH>
 Plug 'tpope/vim-eunuch'
     " :Unlink: Delete a buffer and the file on disk simultaneously.
     " :Remove: Like :Unlink, but doesn't require a neckbeard.
