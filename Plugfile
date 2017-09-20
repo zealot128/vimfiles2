@@ -30,16 +30,16 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-rails'
 Plug 'exu/pgsql.vim'
 Plug 'avakhov/vim-yaml'
+Plug 'ecomba/vim-ruby-refactoring'
 
-Plug 'SyntaxRange'
+Plug 'vim-scripts/SyntaxRange'
 
 
 " Javascript
-" Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'dsawardekar/portkey' " Preq for ember.vim
 Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
-Plug 'othree/html5.vim'
+" Plug 'othree/html5.vim'
 
 Plug 'hsanson/vim-android'
 Plug 'posva/vim-vue'
@@ -54,7 +54,7 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 " dar -> ir, ar -> ruby blocks
-Plug 'camelcasemotion'
+Plug 'vim-scripts/camelcasemotion'
 " vi,w
 Plug 'kana/vim-textobj-indent'
 " dai  -> i and I as Text objects for marking same indented lines
@@ -95,9 +95,11 @@ Plug 'tpope/vim-commentary'
     " gc<MOVE>  or gcc , repeat with .
 
 " Syntax check on buffer save
-Plug 'scrooloose/syntastic'
 if has('nvim')
-  Plug 'benekastah/neomake'
+  " Plug 'benekastah/neomake'
+  Plug 'w0rp/ale'
+else
+  Plug 'scrooloose/syntastic'
 end
 
 " Git plugins
@@ -136,10 +138,10 @@ Plug 'mattn/emmet-vim'
 
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'file-line'
+Plug 'vim-scripts/file-line'
 
 if !has('nvim')
-  Plug 'ZoomWin'
+  Plug 'vim-scripts/ZoomWin'
     " Press <c-w>o : the current window zooms into a full screen
     " Press <c-w>o again: the previous set of windows is restored
 endif
@@ -179,7 +181,7 @@ Plug 'garbas/vim-snipmate'
 " Colorschemes
 "
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-colorscheme-switcher'
+" Plug 'xolox/vim-colorscheme-switcher'
 " :RandomColorscheme
 Plug 'flazz/vim-colorschemes'
 
@@ -202,12 +204,12 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'majutsushi/tagbar'
 
 " Plug 'rainerborene/vim-timetap'
 
-Plug 'plist.vim'
+Plug 'vim-scripts/plist.vim'
 
 call plug#end()
 " vim: ft=vim

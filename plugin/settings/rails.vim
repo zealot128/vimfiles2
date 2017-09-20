@@ -27,6 +27,15 @@ let g:rails_projections = {
 \   "template":
 \   "ActiveAdmin.register %S do\n\n  # form do |f|\n   # f.inputs do\n   # end\n   # f.actions\n  # end\n\n  #menu parent: '', label: ''\n\n  # index do\n  #default_actions\n  # end\n\nend\n"
 \ },
+\ "app/javascript/*.js": {
+\   "command": "pack"
+\ },
+\ "app/javascript/*.vue": {
+\   "command": "vcomponent",
+\   "template": "<template lang='pug'>\n  div\n</template>\n<script>\n\nexport default {\n  computed: {}\n};\n</script>\n<style lang='scss'>\n</style>"
+\ },
+\ "config/locales/*de.yml": { "alternate": "%sen.yml" },
+\ "config/locales/*en.yml": { "alternate": "%sde.yml" },
 \ "config/*.rb": { "command": "config"  },
 \ "api/api/*.rb": { "command": "api"  },
 \ "spec/support/*.rb": {"command": "support"},
@@ -73,6 +82,12 @@ let g:rails_gem_projections = {
 \   "app/workers/*_job.rb": {
 \   "command": "worker",
 \   "template": "class %SJob\n\n  \n@queue = :main\ndef self.perform\n  end\nend"
+\   }
+\ },
+\ "job": {
+\   "app/jobs/*_job.rb": {
+\   "command": "job",
+\   "template": "class %SJob < ApplicationJob\n\n  \nqueue_as :default\n  def perform\n  end\nend"
 \   }
 \ },
 \ "draper": {

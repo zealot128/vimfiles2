@@ -62,4 +62,4 @@ vno  <silent> <Leader>fr   :<c-u>set lz<CR>O<esc>V'>:g/^/m '<<cr>'<dd:set lz!<cr
 nmap <silent> <Leader>fR   V'a\fR
 vno  <silent> <Leader>fR   c<C-O>:set ri lz<cr><C-R>"<esc>:norm! dd`<<cr>:set ri! lz!<cr>
 
-map <C-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeFind<CR>

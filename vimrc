@@ -2,18 +2,23 @@ source ~/.vim/Plugfile
 
 if has('nvim')
   " Run NeoMake on read and write operations
-  set termguicolors
-  autocmd! BufReadPost,BufWritePost * Neomake
+  " set termguicolors
+  " autocmd! BufReadPost,BufWritePost * Neomake
 
-  let g:neomake_warning_sign = {'text': 'w', 'texthl': 'NeomakeWarningSign'}
+  set t_8f=<t_8f>  " Needed in tmux
+  set t_8b=^[[48;2;%lu;%lu;%lum  " Ditto
   "
   " Disable inherited syntastic
   let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": [],
     \ "passive_filetypes": [] }
-  let g:neomake_serialize = 1
-  let g:neomake_serialize_abort_on_error = 1
+  " let g:neomake_warning_sign = {'text': 'w', 'texthl': 'NeomakeWarningSign'}
+  " let g:neomake_serialize = 1
+  " let g:neomake_serialize_abort_on_error = 1
+else
+  " let g:solarized_termcolors=256
+  " set t_Co=256
 endif
 
 " Inline GIT Stuff in number list, like modified lines ~ slow
@@ -90,8 +95,8 @@ endif
 " ----------------------------------------------------------------------------
 "  syntax, highlighting and spelling
 " ----------------------------------------------------------------------------
-let g:solarized_termcolors=256
-set t_Co=256
+" let g:solarized_termcolors=256
+" set t_Co=256
 set background=dark
 " colorscheme seoul256
 " colorscheme hybrid
@@ -99,10 +104,12 @@ set background=dark
 " colorscheme spacegray
 " colorscheme fu
 " colorscheme obsidian
-" colorscheme lucius
+
+colorscheme lucius
 " colorscheme Monokai
 " colorscheme Tomorrow-Night
-colorscheme tender
+" colorscheme tender
+" colorscheme FukurokujoPro
 
 "set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.
@@ -380,9 +387,9 @@ augroup yaml
   autocmd Filetype yaml set fdm=indent
   autocmd BufRead,BufNewFile *de.yml silent setl spell spelllang=de
 augroup END
-autocmd User Rails Rnavcommand cell app/cells -glob=**/* -suffix=_cell.rb
-autocmd User Rails Rnavcommand dec app/decorators -glob=**/* -suffix=_decorator.rb
-autocmd User Rails Rnavcommand concern  app/concerns -glob=**/*
+" autocmd User Rails Rnavcommand cell app/cells -glob=**/* -suffix=_cell.rb
+" autocmd User Rails Rnavcommand dec app/decorators -glob=**/* -suffix=_decorator.rb
+" autocmd User Rails Rnavcommand concern  app/concerns -glob=**/*
 command! Eroutes Einitializer
 command! Rroutes Einitializer
 " autocmd User Rails Rnavcommand routes config/ -glob=routes.rb -suffix= -default=routes.rb
@@ -449,6 +456,8 @@ augroup plist
   autocmd BufWritePost,FileWritePost *.plist call MyBinaryPlistWritePost()
 augroup END
 
+au BufNewFile,BufRead *.vue set path+=app/javascript/
+au BufNewFile,BufRead *app/javascripts/*.js set path+=app/javascript/
 
  " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
  " set rtp+={path}/powerline/bindings/vim
