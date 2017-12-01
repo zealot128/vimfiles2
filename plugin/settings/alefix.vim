@@ -6,6 +6,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'html': [],
 \}
 
 nmap <F7> <Plug>(ale_fix)
