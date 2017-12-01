@@ -27,6 +27,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'elzr/vim-json'
 " Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
+Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rails'
 Plug 'exu/pgsql.vim'
 Plug 'avakhov/vim-yaml'

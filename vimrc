@@ -136,7 +136,7 @@ set statusline+=\ %F
 set statusline+=\ %M
 set statusline+=%R
 set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set statusline+=%=
 set statusline+=\ %Y
@@ -302,6 +302,9 @@ autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:las
 set autoread			    " Automatically re-read files changed outside
                       " of Vim
 autocmd CmdwinEnter * nnoremap <buffer> <esc> :q<cr>
+nmap <F6> :%s/\s\+$//e<cr>:retab<cr>
+
+
 autocmd BufWritePre * :%s/\s\+$//e
 
 " ----------------------------------------------------------------------------
