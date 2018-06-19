@@ -1,27 +1,6 @@
 ########################################
 # Ruby snippets - for Rails, see below #
 ########################################
-
-# encoding for Ruby 1.9
-snippet enc
-	# encoding: utf-8
-
-# #!/usr/bin/env ruby
-snippet #!
-	#!/usr/bin/env ruby
-	# encoding: utf-8
-
-snippet req require
-	require "${1}"${2}
-snippet case
-	case ${1:object}
-	when ${2:condition}
-		${3}
-	end
-snippet def
-	def ${1:method_name}
-		${2}
-	end
 snippet if
 	if ${1:condition}
 		${2}
@@ -71,32 +50,18 @@ snippet pry
 snippet bt
 	belongs_to :${1:association}
 snippet habtm
-	has_and_belongs_to_many :${1:object}, :join_table => "", :foreign_key => "", association_foreign_key: "_id"
+	has_and_belongs_to_many :${1:object}, join_table: "", foreign_key: "", association_foreign_key: "_id"
 snippet hm
-	has_many :${1:other}s, :class_name => "${2:$1}", :foreign_key => "${3:$1}_id", :dependent => :destroy${4}
+	has_many :${1:other}s, class_name: "${2:$1}", foreign_key: "${3:$1}_id", dependent: :destroy${4}
 snippet hmt
-	has_many :${1:object}, :through => :${2:object}
+	has_many :${1:object}, through: :${2:object}
 snippet ho
 	has_one :${1:object}, dependent: :${2:destroy}
 ##########################
 #     Rspec snippets     #
 ##########################
-snippet desc
+snippet spec!
 	require "spec_helper"
 	describe ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} do
-		${2}
-	end
-snippet descm
-	describe "${1:#method}" do
-		${2:pending "Not implemented"}
-	end
-snippet bfe
-	before :${1:each} do
-		${2}
-	end
-snippet let
-	let(:${1:object}) ${2}
-snippet it
-	it "${1:spec_name}" do
 		${2}
 	end

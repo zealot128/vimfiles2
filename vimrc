@@ -103,9 +103,9 @@ set background=dark
 " colorscheme atom-dark-256
 " colorscheme spacegray
 " colorscheme fu
-" colorscheme obsidian
+colorscheme obsidian
 
-colorscheme lucius
+" colorscheme lucius
 " colorscheme Monokai
 " colorscheme Tomorrow-Night
 " colorscheme tender

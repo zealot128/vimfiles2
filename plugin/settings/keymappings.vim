@@ -63,3 +63,5 @@ nmap <silent> <Leader>fR   V'a\fR
 vno  <silent> <Leader>fR   c<C-O>:set ri lz<cr><C-R>"<esc>:norm! dd`<<cr>:set ri! lz!<cr>
 
 map <C-n> :NERDTreeFind<CR>
+
+command! ReplaceRuby19Hash :%s/:\([a-z_]\+\) *=> */\1: /
