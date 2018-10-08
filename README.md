@@ -1,10 +1,10 @@
 Vimfiles
 ========
 
-Vim files for Linux and Windows
+My vim files for Linux and Mac.
 
 
-## First time install 
+## First time install
 
 0. Fast
 
@@ -13,23 +13,25 @@ Vim files for Linux and Windows
     ```
 
 
-1. Clone this repository:
+1. Manual: Clone this repository:
 
     ```
-    $ git clone https://github.com/dougireton/vimfiles.git ~/.vim
+    $ git clone https://github.com/zealot128/vimfiles2.git ~/.vim
     cd ~/.vim
     ````
 
 
-2. Optional: install vim with python and ruby support (needed for some plugins) 
 
-    ```
-    rake vim
-    ```
-
-3. Install Vundle, Powerline with fonts and stuff
+2. Symlink config
 
     ````
-    rake all
-    ```
+    make install
+    ````
+
+3. Install Plugins
+
+    ````
+    nvim
+    :PlugInstall
+    ````
 
