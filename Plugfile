@@ -66,6 +66,7 @@ Plug 'kana/vim-textobj-line'
 " dal, dil -> line
 Plug 'thinca/vim-textobj-between'
 " af<char>
+Plug 'gcmt/wildfire.vim'
 
 " Windows Powershell
 " Plug 'dougireton/vim-ps1'
@@ -212,6 +213,8 @@ Plug 'majutsushi/tagbar'
 " Plug 'rainerborene/vim-timetap'
 
 Plug 'vim-scripts/plist.vim'
+
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 " vim: ft=vim
