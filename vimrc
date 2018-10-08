@@ -106,6 +106,9 @@ set background=dark
 colorscheme obsidian
 
 " colorscheme lucius
+colorscheme codedark
+let g:airline_theme = 'codedark'
+
 " colorscheme Monokai
 " colorscheme Tomorrow-Night
 " colorscheme tender

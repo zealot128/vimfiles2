@@ -189,15 +189,16 @@ Plug 'xolox/vim-misc'
 Plug 'flazz/vim-colorschemes'
 
 " True Color Colorschemes
-Plug 'jacoborus/tender'
-
+" Plug 'jacoborus/tender'
+Plug 'tomasiser/vim-code-dark'
 "Plug 'altercation/vim-colors-solarized'
-Plug 'cocopon/svss.vim'
-Plug 'daddye/soda.vim'
+
+" Plug 'cocopon/svss.vim'
+" Plug 'daddye/soda.vim'
 "Plug 'chriskempson/base16-vim'
-Plug 'ajh17/Spacegray.vim'
-Plug 'gosukiwi/vim-atom-dark'
-Plug 'nice/sweater'
+" Plug 'ajh17/Spacegray.vim'
+" Plug 'gosukiwi/vim-atom-dark'
+" Plug 'nice/sweater'
 Plug 'nemesit/vim-colors-fukurokujopro'
 
 
