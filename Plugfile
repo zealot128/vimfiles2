@@ -51,8 +51,11 @@ Plug 'hail2u/vim-css3-syntax'
 
 
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-" Typescript Syntax completion
-" Plug 'Quramy/tsuquyomi'
+
+" Autocomplete all the things
+Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
+Plug 'neoclide/coc-tsserver'
+
 Plug 'vim-scripts/LargeFile'
 let g:LargeFile= 10
 
