@@ -52,6 +52,8 @@ Plug 'hail2u/vim-css3-syntax'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Typescript Syntax completion
 " Plug 'Quramy/tsuquyomi'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
+Plug 'neoclide/coc-tsserver'
 
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
