@@ -98,21 +98,22 @@ endif
 " let g:solarized_termcolors=256
 " set t_Co=256
 set background=dark
+" colorscheme FukurokujoPro
+colorscheme codedark
+let g:airline_theme = 'codedark'
+
 " colorscheme seoul256
 " colorscheme hybrid
 " colorscheme atom-dark-256
 " colorscheme spacegray
 " colorscheme fu
-colorscheme obsidian
+" colorscheme obsidian
 
 " colorscheme lucius
-colorscheme codedark
-let g:airline_theme = 'codedark'
 
 " colorscheme Monokai
 " colorscheme Tomorrow-Night
 " colorscheme tender
-" colorscheme FukurokujoPro
 
 "set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.

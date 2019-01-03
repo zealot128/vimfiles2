@@ -28,6 +28,7 @@ Plug 'elzr/vim-json'
 " Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
+
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-rails'
 Plug 'exu/pgsql.vim'
@@ -50,10 +51,13 @@ Plug 'hail2u/vim-css3-syntax'
 
 
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-" Typescript Syntax completion
-" Plug 'Quramy/tsuquyomi'
+
+" Autocomplete all the things
 Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 Plug 'neoclide/coc-tsserver'
+
+Plug 'vim-scripts/LargeFile'
+let g:LargeFile= 10
 
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
@@ -68,6 +72,7 @@ Plug 'kana/vim-textobj-line'
 " dal, dil -> line
 Plug 'thinca/vim-textobj-between'
 " af<char>
+Plug 'gcmt/wildfire.vim'
 
 " Windows Powershell
 " Plug 'dougireton/vim-ps1'
@@ -132,7 +137,7 @@ Plug 'tpope/vim-surround'
    " Parentheses, html tags surround:
    "  * visual select:  S followed by on char or html tag
 " Plug 'skammer/vim-css-color'
-Plug 'eapache/rainbow_parentheses.vim'
+" Plug 'eapache/rainbow_parentheses.vim'
 
    " Parenthese highlightings
 
@@ -156,12 +161,15 @@ Plug 'godlygeek/tabular'
     " :Tabularize /,
 
 " File managers/explorers
-Plug 'kien/ctrlp.vim'
-Plug 'JazzCore/ctrlp-cmatcher'
-Plug 'mileszs/ack.vim'
+" Plug 'kien/ctrlp.vim'
+" Plug 'JazzCore/ctrlp-cmatcher'
+" Plug 'mileszs/ack.vim'
 " :Ack <SEARCH>
 Plug 'rking/ag.vim'
 " :Ag <SEARCH>
+Plug 'jremmen/vim-ripgrep'
+Plug 'srstevenson/vim-picker'
+" :Rg <SEARCH>
 Plug 'tpope/vim-eunuch'
     " :Unlink: Delete a buffer and the file on disk simultaneously.
     " :Remove: Like :Unlink, but doesn't require a neckbeard.
@@ -200,21 +208,23 @@ Plug 'tomasiser/vim-code-dark'
 " Plug 'ajh17/Spacegray.vim'
 " Plug 'gosukiwi/vim-atom-dark'
 " Plug 'nice/sweater'
-Plug 'nemesit/vim-colors-fukurokujopro'
+" Plug 'nemesit/vim-colors-fukurokujopro'
 
 
 
 
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/limelight.vim'
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim
 Plug 'vim-airline/vim-airline'
-Plug 'majutsushi/tagbar'
+" Plug 'majutsushi/tagbar'
 
 " Plug 'rainerborene/vim-timetap'
 
 Plug 'vim-scripts/plist.vim'
+
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 " vim: ft=vim

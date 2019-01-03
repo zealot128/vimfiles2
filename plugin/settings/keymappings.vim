@@ -65,3 +65,4 @@ vno  <silent> <Leader>fR   c<C-O>:set ri lz<cr><C-R>"<esc>:norm! dd`<<cr>:set ri
 map <C-n> :NERDTreeFind<CR>
 
 command! ReplaceRuby19Hash :%s/:\([a-z_]\+\) *=> */\1: /
+command! Ruby19HashConvert :%s/:\([a-z_]\+\) *=> */\1: /
