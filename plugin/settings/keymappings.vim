@@ -66,3 +66,5 @@ map <C-n> :NERDTreeFind<CR>
 
 command! ReplaceRuby19Hash :%s/:\([a-z_]\+\) *=> */\1: /
 command! Ruby19HashConvert :%s/:\([a-z_]\+\) *=> */\1: /
+
+command! RubyHashToSym :%s/["']\([^"']\+\)["'] *=> */\1: /

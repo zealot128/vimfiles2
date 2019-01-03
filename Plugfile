@@ -178,6 +178,9 @@ Plug 'tpope/vim-eunuch'
     " :W: Write every open window. Handy for kicking off tools like guard.
 Plug 'junegunn/fzf', { 'dir': '~/.vim/fzf', 'do': './install --all' }
 
+" Tmux :TYank -> Copy to tmux, :TPut -> Paste from tmux
+Plug 'tpope/vim-tbone'
+
 " Snippets and Dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'

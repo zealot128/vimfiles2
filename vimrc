@@ -99,11 +99,11 @@ endif
 " set t_Co=256
 set background=dark
 " colorscheme FukurokujoPro
-colorscheme codedark
+" colorscheme codedark
 let g:airline_theme = 'codedark'
 
 " colorscheme seoul256
-" colorscheme hybrid
+colorscheme hybrid
 " colorscheme atom-dark-256
 " colorscheme spacegray
 " colorscheme fu
