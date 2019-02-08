@@ -470,8 +470,8 @@ au BufNewFile,BufRead *app/javascript/*.vue
       \ setl path+=app/javascript/,node_modules |
       \ setl suffixesadd+=.js,.json,.scss
 
- " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
- " set rtp+={path}/powerline/bindings/vim
+" Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" set rtp+={path}/powerline/bindings/vim
 
 
 if &term =~ '256color'
