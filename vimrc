@@ -463,8 +463,12 @@ augroup plist
   autocmd BufWritePost,FileWritePost *.plist call MyBinaryPlistWritePost()
 augroup END
 
-au BufNewFile,BufRead *.vue set path+=app/javascript/
-au BufNewFile,BufRead *app/javascripts/*.js set path+=app/javascript/
+au BufNewFile,BufRead *app/javascript/*.js \
+      \ setl path+=app/javascript/,node_modules |
+      \ setl suffixesadd+=.vue,.json,.scss
+au BufNewFile,BufRead *app/javascript/*.vue
+      \ setl path+=app/javascript/,node_modules |
+      \ setl suffixesadd+=.js,.json,.scss
 
  " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
  " set rtp+={path}/powerline/bindings/vim

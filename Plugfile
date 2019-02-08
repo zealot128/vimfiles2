@@ -154,7 +154,7 @@ if !has('nvim')
     " Press <c-w>o : the current window zooms into a full screen
     " Press <c-w>o again: the previous set of windows is restored
 endif
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 Plug 'tpope/vim-endwise'
 Plug 'godlygeek/tabular'
     " Align Text with:
@@ -187,7 +187,7 @@ Plug 'tpope/vim-tbone'
 " Snippets and Dependencies
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+" Plug 'garbas/vim-snipmate'
 
 " F2 -> Save last macro,  F3 load last macro
 " let marvim_store = '//.vim/marvim'

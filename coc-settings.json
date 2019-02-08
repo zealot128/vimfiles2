@@ -1,0 +1,14 @@
+{
+  "coc.preferences.autoTrigger": "trigger",
+  "coc.source.file.triggerCharacters": [
+    "/",
+    ".",
+    "<TAB>",
+    "\t"
+  ],
+  "solargraph.trace.server": "messages",
+  "solargraph.hover": true,
+  "solargraph.useBundler": true,
+  "solargraph.completion": true,
+  "javascript.suggest.enabled": false
+}
