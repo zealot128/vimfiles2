@@ -1,10 +1,10 @@
 {
-  "coc.preferences.autoTrigger": "trigger",
+  "suggest.autoTrigger": "always",
+  "suggest.minTriggerInputLength": 2,
+  "suggest.noselect": false,
   "coc.source.file.triggerCharacters": [
     "/",
-    ".",
-    "<TAB>",
-    "\t"
+    "."
   ],
   "solargraph.trace.server": "messages",
   "solargraph.hover": true,

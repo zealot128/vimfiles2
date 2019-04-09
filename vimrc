@@ -100,10 +100,10 @@ endif
 set background=dark
 " colorscheme FukurokujoPro
 " colorscheme codedark
-let g:airline_theme = 'codedark'
 
 " colorscheme seoul256
 colorscheme hybrid
+let g:airline_theme = 'onedark'
 " colorscheme atom-dark-256
 " colorscheme spacegray
 " colorscheme fu
@@ -463,12 +463,18 @@ augroup plist
   autocmd BufWritePost,FileWritePost *.plist call MyBinaryPlistWritePost()
 augroup END
 
-au BufNewFile,BufRead *app/javascript/*.js \
+" make gf work great in Webpacker Rails JS files
+au BufNewFile,BufRead *app/javascript/*.js
       \ setl path+=app/javascript/,node_modules |
+      \ setl isfname+=@-@ |
       \ setl suffixesadd+=.vue,.json,.scss
 au BufNewFile,BufRead *app/javascript/*.vue
       \ setl path+=app/javascript/,node_modules |
+      \ setl isfname+=@-@ |
       \ setl suffixesadd+=.js,.json,.scss
+
+" Auto close HTML Tags
+inoremap <lt>/ </<C-x><C-o><Esc>==gi
 
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim

@@ -5,7 +5,7 @@ let g:ale_ruby_rubocop_options = '--except Lint/Debugger -D'
 let g:ale_lint_delay = 1000
 let g:ale_lint_on_text_changed='normal'
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'javascript': ['prettier'],
 \   'ruby': ['rubocop'],
 \}
 let g:ale_linters = {

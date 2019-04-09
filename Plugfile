@@ -185,9 +185,14 @@ Plug 'junegunn/fzf', { 'dir': '~/.vim/fzf', 'do': './install --all' }
 Plug 'tpope/vim-tbone'
 
 " Snippets and Dependencies
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
+" Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
+if has('python')
+  Plug 'SirVer/ultisnips'
+  " Snippets are separated from the engine. Add this if you want them:
+  Plug 'honza/vim-snippets'
+endif
 
 " F2 -> Save last macro,  F3 load last macro
 " let marvim_store = '//.vim/marvim'
@@ -221,6 +226,7 @@ Plug 'tomasiser/vim-code-dark'
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " Plug 'majutsushi/tagbar'
 
 " Plug 'rainerborene/vim-timetap'
