@@ -287,6 +287,9 @@ inoremap OH <Home>
 inoremap OF <End>
 inoremap \fn <C-R>=expand("%")<CR>
 
+" Save on enter
+nnoremap <silent><expr> <CR> &buftype is# '' ? ":w\<CR>" : "\<CR>"
+
 " ,rt -> regeneriert tags mit gems
 map <leader>rt :!ctags --extra=+f --languages=-javascript --exclude=.git --exclude=log -R * `rvm gemdir`/gems/* `rvm gemdir`/bundler/gems/*<CR><C-M>
 

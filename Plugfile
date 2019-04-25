@@ -72,7 +72,8 @@ Plug 'kana/vim-textobj-line'
 " dal, dil -> line
 Plug 'thinca/vim-textobj-between'
 " af<char>
-Plug 'gcmt/wildfire.vim'
+" Plug 'gcmt/wildfire.vim'
+" Select somehting on Enter
 
 " Windows Powershell
 " Plug 'dougireton/vim-ps1'
