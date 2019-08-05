@@ -65,3 +65,58 @@ snippet spec!
 	describe ${1:`substitute(Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} do
 		${2}
 	end
+
+snippet restctrl
+	class ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} < ApplicationController
+		before_action :find_${2:`substitute(vim_snippets#Filename(), '_controller$', '', '')`}, only: [:show, :edit, :update, :destroy]
+
+		def index
+			@${2}s = ${3:`substitute(substitute(vim_snippets#Filename(), '_controller$', '', ''), '\(_\|^\)\(.\)', '\u\2', 'g')`}.all
+		end
+
+		def show
+		end
+
+		def new
+			@${2} = ${3}.new
+		end
+
+		def edit
+		end
+
+		def create
+			@${2} = ${3}.new(permitted_params)
+			if @${2}.save
+				flash[:notice] = '${3} was successfully created.'
+				redirect_to @${2}
+			else
+				render :new
+			end
+		end
+
+		def update
+			if @${2}.update(permitted_params)
+				flash[:notice] = '${3} was successfully updated.'
+				redirect_to @${2}
+			else
+				render :edit
+			end
+		end
+
+		def destroy
+			@${2}.destroy
+			flash[:notice] = '${3} was successfully deleted.'
+			redirect_to ${2}s_path
+		end
+
+		private
+
+		def find_${2}
+			@${2} = ${3}.find(params[:id])
+		end
+
+		def permitted_params
+			params.require(:${2}).permit!
+		end
+	end
+
