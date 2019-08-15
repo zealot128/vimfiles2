@@ -2,6 +2,8 @@
   "suggest.autoTrigger": "always",
   "suggest.minTriggerInputLength": 2,
   "suggest.noselect": false,
+  "solargraph.checkGemVersion": false,
+  "coc.preferences.extensionUpdateCheck":"never",
   "coc.source.file.triggerCharacters": [
     "/",
     "."

@@ -1,5 +1,5 @@
-let g:picker_find_executable = 'rg'
-let g:picker_find_flags = '--color never --files'
+let g:picker_custom_find_executable = 'rg'
+let g:picker_custom_find_flags = '--color never --files'
 
 let machine = system('uname -s', '\n')[:-2]
 let g:picker_selector_executable = expand('~/.vim/bin/fzy-'.machine)
