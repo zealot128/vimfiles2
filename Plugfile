@@ -171,7 +171,7 @@ Plug 'rking/ag.vim'
 Plug 'jremmen/vim-ripgrep'
 Plug 'srstevenson/vim-picker'
 " :Rg <SEARCH>
-Plug 'lambdalisue/suda'
+Plug 'lambdalisue/suda.vim'
 Plug 'tpope/vim-eunuch'
     " :Unlink: Delete a buffer and the file on disk simultaneously.
     " :Remove: Like :Unlink, but doesn't require a neckbeard.

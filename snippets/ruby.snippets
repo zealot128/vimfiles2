@@ -67,11 +67,11 @@ snippet spec!
 	end
 
 snippet restctrl
-	class ${1:`substitute(vim_snippets#Filename(), '\(_\|^\)\(.\)', '\u\2', 'g')`} < ApplicationController
-		before_action :find_${2:`substitute(vim_snippets#Filename(), '_controller$', '', '')`}, only: [:show, :edit, :update, :destroy]
+	class ${1:`substitute(substitute(substitute(expand("%:r"), 'app/controllers/', '', ''), '/', '::_', 'g'), '\(_\|^\)\(.\)', '\u\2', 'g')`} < ApplicationController
+		before_action :find_${2:`substitute(substitute(vim_snippets#Filename(), '_controller$', '', ''), 's$', '', '')`}, only: [:show, :edit, :update, :destroy]
 
 		def index
-			@${2}s = ${3:`substitute(substitute(vim_snippets#Filename(), '_controller$', '', ''), '\(_\|^\)\(.\)', '\u\2', 'g')`}.all
+			@${2}s = ${3:`substitute(substitute(substitute(vim_snippets#Filename(), '_controller$', '', ''), '\(_\|^\)\(.\)', '\u\2', 'g'), 's$', '', '')`}.all
 		end
 
 		def show
