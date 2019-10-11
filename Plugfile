@@ -179,6 +179,9 @@ Plug 'rking/ag.vim'
 " :Ag <SEARCH>
 Plug 'jremmen/vim-ripgrep'
 Plug 'srstevenson/vim-picker'
+if has('nvim-0.4')
+  Plug 'liuchengxu/vim-clap'
+endif
 " :Rg <SEARCH>
 Plug 'lambdalisue/suda.vim'
 Plug 'tpope/vim-eunuch'
