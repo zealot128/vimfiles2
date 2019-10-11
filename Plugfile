@@ -29,6 +29,15 @@ Plug 'elzr/vim-json'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 
+
+" Moving to the parent node ( :YamlGoToParent ),
+" Getting the full path to the current element ( :YamlGetFullPath ),
+" Moving to an element, given the path ( :YamlGoToKey )
+Plug 'lmeijvogel/vim-yaml-helper'
+let g:vim_yaml_helper#always_get_root = 1
+let g:vim_yaml_helper#auto_display_path = 1
+nmap <C-g> :YamlGoToParent<CR>
+
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'tpope/vim-rails'
 Plug 'exu/pgsql.vim'
