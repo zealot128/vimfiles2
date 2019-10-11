@@ -1,0 +1,27 @@
+extends html, javascript, css
+snippet transition
+	<transition name="${0}"></transition>
+
+snippet vbase
+	<template>
+		<div>
+		</div>
+	</template>
+
+	<script>
+	export default {
+		components: {},
+		props: {},
+		data() {
+			return {}
+		},
+		computed: {},
+		methods: {},
+	}
+	</script>
+
+	<style scoped>
+	</style>
+
+snippet vimport
+	import ${1:New} from './components/$1';
