@@ -69,10 +69,16 @@ Plug 'vim-scripts/LargeFile'
 let g:LargeFile= 10
 
 Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
+
+
+" provides additional text object separators such as: *, |, =, and _ to name a few.
+Plug 'wellle/targets.vim'
+
 " dar -> ir, ar -> ruby blocks
-Plug 'vim-scripts/camelcasemotion'
-" vi,w
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+" w moves in camelcase snakecase
+Plug 'chaoren/vim-wordmotion'
 Plug 'kana/vim-textobj-indent'
 " dai  -> i and I as Text objects for marking same indented lines
 Plug 'kana/vim-textobj-syntax'
