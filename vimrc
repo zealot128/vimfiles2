@@ -295,8 +295,8 @@ map <leader>rt :!ctags --extra=+f --languages=-javascript --exclude=.git --exclu
 
 map <leader>spec :exe "!bundle exec rspec % -l " . line(".")<CR>
 
-cnoremap <C-a> <Home>
-cnoremap <C-e> <End>
+"cnoremap <C-a> <Home>
+"cnoremap <C-e> <End>
 
 " http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
 " completion beschleunigen

@@ -5,10 +5,13 @@ let g:ale_ruby_rubocop_options = '--except Lint/Debugger -D'
 let g:ale_lint_delay = 1000
 let g:ale_lint_on_text_changed='normal'
 let g:ale_fixers = {
-\   'javascript': ['prettier'],
+\   'javascript': ['prettier', 'eslint'],
 \   'ruby': ['rubocop'],
+\   'terraform': ['terraform'],
+\   'vue': ['eslint', 'prettier'],
 \}
 let g:ale_linters = {
+\   'terraform': ['terraform'],
 \   'javascript': ['eslint'],
 \   'html': [],
 \}
