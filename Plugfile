@@ -28,6 +28,9 @@ Plug 'elzr/vim-json'
 " Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
+Plug 'gisraptor/vim-lilypond-integrator'
+au BufRead lilypond set makeprg=lilypond\ -s\ %
+au BufWritePost *.ly make
 
 
 " Moving to the parent node ( :YamlGoToParent ),
@@ -55,6 +58,7 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'hsanson/vim-android'
 Plug 'posva/vim-vue'
+Plug 'leafOfTree/vim-svelte-plugin'
 Plug 'hail2u/vim-css3-syntax'
 
 
