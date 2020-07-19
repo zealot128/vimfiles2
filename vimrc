@@ -477,7 +477,7 @@ au BufNewFile,BufRead *app/javascript/*.vue
       \ setl suffixesadd+=.js,.json,.scss
 
 " Auto close HTML Tags
-inoremap <lt>/ </<C-x><C-o><Esc>==gi
+" inoremap <lt>/ </<C-x><C-o><Esc>==gi
 
 " Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " set rtp+={path}/powerline/bindings/vim

@@ -70,6 +70,13 @@ let g:LargeFile= 10
 
 Plug 'kana/vim-textobj-user'
 
+" Project wide sarch&replace with gui
+" :Far ../group_vars/pubkeys.yml ../global/pubkeys.yml **/*.yml --source=rg
+"   -> oeffnet Fenster
+" :Farp  -> interaktiv
+" :Fardo -> ersetzt
+Plug 'brooth/far.vim'
+let g:far#source = 'rgnvim'
 
 " provides additional text object separators such as: *, |, =, and _ to name a few.
 Plug 'wellle/targets.vim'
@@ -205,13 +212,13 @@ Plug 'junegunn/fzf', { 'dir': '~/.vim/fzf', 'do': './install --all' }
 Plug 'tpope/vim-tbone'
 
 " Snippets and Dependencies
-if has('python')
-  Plug 'SirVer/ultisnips'
-else
+" if has('python')
+"   Plug 'SirVer/ultisnips'
+" else
   Plug 'MarcWeber/vim-addon-mw-utils'
   Plug 'tomtom/tlib_vim'
   Plug 'garbas/vim-snipmate'
-endif
+" endif
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
 
