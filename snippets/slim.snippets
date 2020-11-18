@@ -1,5 +1,5 @@
 snippet simple_form
-	= simple_form_for @${1:`substitute(expand('%:h:t'), 's$', '', '')`} do |f|
+	simple_form_for @${1:`substitute(expand('%:h:t'), 's$', '', '')`} do |f|
 		= f.input :${2}
 		= f.submit t('save'), class: 'btn btn-primary'
 snippet translate

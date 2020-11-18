@@ -1,21 +1,8 @@
 source ~/.vim/Plugfile
 
 if has('nvim')
-  " Run NeoMake on read and write operations
-  " set termguicolors
-  " autocmd! BufReadPost,BufWritePost * Neomake
-
   set t_8f=<t_8f>  " Needed in tmux
   set t_8b=^[[48;2;%lu;%lu;%lum  " Ditto
-  "
-  " Disable inherited syntastic
-  let g:syntastic_mode_map = {
-    \ "mode": "passive",
-    \ "active_filetypes": [],
-    \ "passive_filetypes": [] }
-  " let g:neomake_warning_sign = {'text': 'w', 'texthl': 'NeomakeWarningSign'}
-  " let g:neomake_serialize = 1
-  " let g:neomake_serialize_abort_on_error = 1
 else
   " let g:solarized_termcolors=256
   " set t_Co=256
@@ -24,18 +11,11 @@ endif
 " Inline GIT Stuff in number list, like modified lines ~ slow
 " Plug 'airblade/vim-gitgutter'
 
-if has('autocmd')
-  filetype plugin indent on	  " Turn on Filetype detection, plugins, and
-                              " indent
-endif
+filetype plugin indent on	  " Turn on Filetype detection, plugins, and
+" indent
 
-if has('syntax') && !exists('g:syntax_on')
-  syntax enable			" Turn on syntax highlighting
-endif
-
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim   " use the built-in Matchit pluginm
-endif
+set encoding=utf-8
+syntax enable			" Turn on syntax highlighting
 
 " load the man plugin for a nice man viewer
 runtime! ftplugin/man.vim
@@ -170,15 +150,6 @@ set ttyfast			      " this is the 21st century, people
 set mouse=
 
 " ----------------------------------------------------------------------------
-"  GUI				      " Set these options in .gvimrc
-" See help for 'setting-guifont' for tips on how to set guifont on Mac vs Windows
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  printing
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
 "  messages and info
 " ----------------------------------------------------------------------------
 
@@ -283,25 +254,22 @@ map <F5> :redraw!<CR>
 map OH <Home>
 map OF <End>
 
-inoremap OH <Home>
-inoremap OF <End>
+" inoremap OH <Home>
+" inoremap OF <End>
 inoremap \fn <C-R>=expand("%")<CR>
 
-" Save on enter
-nnoremap <silent><expr> <CR> &buftype is# '' ? ":w\<CR>" : "\<CR>"
 
 " ,rt -> regeneriert tags mit gems
-map <leader>rt :!ctags --extra=+f --languages=-javascript --exclude=.git --exclude=log -R * `rvm gemdir`/gems/* `rvm gemdir`/bundler/gems/*<CR><C-M>
-
-map <leader>spec :exe "!bundle exec rspec % -l " . line(".")<CR>
-
-"cnoremap <C-a> <Home>
-"cnoremap <C-e> <End>
-
+" map <leader>rt :!ctags --extra=+f --languages=-javascript --exclude=.git --exclude=log -R * `rvm gemdir`/gems/* `rvm gemdir`/bundler/gems/*<CR><C-M>
+"
+" cnoremap <C-a> <Home>
+" cnoremap <C-e> <End>
+"
 " http://vim.wikia.com/wiki/Keep_folds_closed_while_inserting_text
 " completion beschleunigen
-autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
-autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
+" autocmd InsertEnter * if !exists('w:last_fdm') | let w:last_fdm=&foldmethod | setlocal foldmethod=manual | endif
+" next line SLOW!!!
+" autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:last_fdm | unlet w:last_fdm | endif
 
 " ----------------------------------------------------------------------------
 "  reading and writing files
@@ -309,14 +277,11 @@ autocmd InsertLeave,WinLeave * if exists('w:last_fdm') | let &l:foldmethod=w:las
 set autoread			    " Automatically re-read files changed outside
                       " of Vim
 autocmd CmdwinEnter * nnoremap <buffer> <esc> :q<cr>
-nmap <F6> :%s/\s\+$//e<cr>:retab<cr>
 
-
+" Delete every useless whitespace
 autocmd BufWritePre * :%s/\s\+$//e
-
-" ----------------------------------------------------------------------------
-"  the swap file
-" ----------------------------------------------------------------------------
+" Save on enter
+nnoremap <silent><expr> <CR> &buftype is# '' ? ":w\<CR>" : "\<CR>"
 
 if has("win32") || has("win64")
   set directory=$TEMP
@@ -324,11 +289,6 @@ else
   " Vim will try this ordered list of directories for .swp files
   set directory=~/tmp,.,/var/tmp,/tmp
 endif
-
-" ----------------------------------------------------------------------------
-"  command line editing " ---------------------------------------------------------------------------- set history=200 		" Save more commands in history
-                    " See Practical Vim, by Drew Neil, pg 68
-
 set wildmode=list:longest,full
 
 " File tab completion ignores these file patterns
@@ -338,40 +298,12 @@ set wildignore+=*/log/*
 set wildignore+=*/coverage/*
 set wildignore+=*/public/system/*  " Rails images
 set wildmenu
-
-" Add guard around 'wildignorecase' to prevent terminal vim error
-if exists('&wildignorecase')
-  set wildignorecase
-endif
-
-" ----------------------------------------------------------------------------
-"  executing external commands
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  running make and jumping to errors
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  language specific
-" ----------------------------------------------------------------------------
-
-" ----------------------------------------------------------------------------
-"  multi-byte characters
-" ----------------------------------------------------------------------------
-set encoding=utf-8
-
-" ----------------------------------------------------------------------------
-"  various
-" ----------------------------------------------------------------------------
+set wildignorecase
 set gdefault                    " For :substitute, use the /g flag by default
 
 " ----------------------------------------------------------------------------
 " Autocmds
 " ----------------------------------------------------------------------------
-
-" Make gf work on Chef include_recipe lines
-" Add all cookbooks/*/recipe dirs to Vim's path variable
 autocmd BufRead,BufNewFile */cookbooks/*/recipes/*.rb setlocal path+=recipes;/cookbooks/**1
 augroup module
   autocmd BufRead,BufNewFile *.module set filetype=php
@@ -405,83 +337,26 @@ command! Rroutes Einitializer
 " autocmd User Rails Rnavcommand routes config/ -glob=routes.rb -suffix= -default=routes.rb
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 au BufNewFile,BufRead *.sql setf pgsql
-augroup plist
-  " Delete existing commands (avoid problems if this file is sourced twice)
-  autocmd!
-
-  " Set binary mode (needs to be set _before_ reading binary files to avoid
-  " breaking lines etc; since setting this for normal plist files doesn't
-  " hurt and it's not yet known whether or not the file to be read is stored
-  " in binary format, set the option in any case to be sure).
-  " Do it before editing a file in a new buffer and before reading a file
-  " into in an existing buffer (using ':read foo.plist').
-  autocmd BufReadPre,FileReadPre *.plist set binary
-
-  " Define a little function to convert binary files if necessary...
-  fun MyBinaryPlistReadPost()
-          " Check if the first line just read in indicates a binary plist
-          if getline("'[") =~ "^bplist"
-                  " Filter lines read into buffer (convert to XML with plutil)
-                  '[,']!plutil -convert xml1 /dev/stdin -o /dev/stdout
-                  " Many people seem to want to save files originally stored
-                  " in binary format as such after editing, so memorize format.
-                  let b:saveAsBinaryPlist = 1
-          endif
-          " Yeah, plain text (finally or all the way through, either way...)!
-          set nobinary
-          " Trigger file type detection to get syntax coloring etc. according
-          " to file contents (alternative: 'setfiletype xml' to force xml).
-          filetype detect
-  endfun
-  " ... and call it just after editing a file in a new buffer...
-  autocmd BufReadPost *.plist call MyBinaryPlistReadPost()
-  " ... or when reading a file into an existing buffer (in that case, don't
-  " save as binary later on).
-  autocmd FileReadPost *.plist call MyBinaryPlistReadPost() | let b:saveAsBinaryPlist = 0
-
-  " Define and use functions for conversion back to binary format
-  fun MyBinaryPlistWritePre()
-          if exists("b:saveAsBinaryPlist") && b:saveAsBinaryPlist
-                  " Must set binary mode before conversion (for EOL settings)
-                  set binary
-                  " Convert buffer lines to be written to binary
-                  silent '[,']!plutil -convert binary1 /dev/stdin -o /dev/stdout
-                  " If there was a problem, e.g. when the file contains syntax
-                  " errors, undo the conversion and go back to nobinary so the
-                  " file will be saved in text format.
-                  if v:shell_error | undo | set nobinary | endif
-          endif
-  endfun
-  autocmd BufWritePre,FileWritePre *.plist call MyBinaryPlistWritePre()
-  fun MyBinaryPlistWritePost()
-          " If file was to be written in binary format and there was no error
-          " doing the conversion, ...
-          if exists("b:saveAsBinaryPlist") && b:saveAsBinaryPlist && !v:shell_error
-                  " ... undo the conversion and go back to nobinary so the
-                  " lines are shown as text again in vim.
-                  undo
-                  set nobinary
-          endif
-  endfun
-  autocmd BufWritePost,FileWritePost *.plist call MyBinaryPlistWritePost()
-augroup END
 
 " make gf work great in Webpacker Rails JS files
 au BufNewFile,BufRead *app/javascript/*.js
       \ setl path+=app/javascript/,node_modules |
       \ setl isfname+=@-@ |
-      \ setl suffixesadd+=.vue,.json,.scss
+      \ setl suffixesadd+=.vue,.json,.scss,.svelte
 au BufNewFile,BufRead *app/javascript/*.vue
       \ setl path+=app/javascript/,node_modules |
       \ setl isfname+=@-@ |
       \ setl suffixesadd+=.js,.json,.scss
+au BufNewFile,BufRead *app/javascript/*.svelte
+      \ setl path+=app/javascript/,node_modules |
+      \ setl isfname+=@-@ |
+      \ setl suffixesadd+=.js,.json,.scss
 
-" Auto close HTML Tags
-" inoremap <lt>/ </<C-x><C-o><Esc>==gi
-
-" Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-" set rtp+={path}/powerline/bindings/vim
-
+au BufNewFile,BufRead *app/javascript/*.scss
+      \ setl path+=app/javascript/,node_modules |
+      \ setl suffixesadd+=.css,.scss,.sass |
+      \ setl isfname+=@-@ |
+      \ setl inex=substitute(v:fname,'^\\~','','')
 
 if &term =~ '256color'
   " Disable Background Color Erase (BCE) so that color schemes
@@ -491,8 +366,7 @@ if &term =~ '256color'
 endif
 
 
-" allow project specific .vimrc, change to secure mode, so that files cannot
-"  do harmful stuff
+" allow project specific .vimrc, change to secure mode, so that files cannot do harmful stuff
 set exrc
 set secure
 

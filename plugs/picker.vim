@@ -1,3 +1,12 @@
+Plug 'junegunn/fzf', { 'dir': '~/.vim/fzf', 'do': './install --all' }
+Plug 'srstevenson/vim-picker'
+if has('nvim-0.4')
+  let g:clap_insert_mode_only=v:true
+  " let g:clap_theme = 'material_design_dark'
+  " let g:clap_default_external_filter = 'fzf'
+  Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!',  'branch': 'v0.3' }
+endif
+
 if has('nvim-0.4')
   nnoremap <silent> <C-p> :Clap! files<cr>
   nnoremap <silent> <C-f> :Clap! files<cr>
