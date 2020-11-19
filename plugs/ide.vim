@@ -41,11 +41,13 @@ if has('nvim')
         \   'ruby': ['rubocop'],
         \   'terraform': ['terraform'],
         \   'vue': ['eslint', 'prettier'],
+        \   'svelte': ['eslint', 'prettier'],
         \}
   let g:ale_linters = {
         \   'terraform': ['terraform'],
         \   'javascript': ['eslint'],
         \   'html': [],
+        \   'svelte': ['eslint', 'prettier'],
         \}
 
   nmap <F7> <Plug>(ale_fix)
