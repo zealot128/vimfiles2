@@ -12,6 +12,19 @@ let g:rails_projections = {
 \   "related": "app/models/%s.rb",
 \   "template": "class %S\n\n  def run\n  end\nend"
 \ },
+\ "app/components/*.rb": {
+\   "command": "component",
+\   "test": "spec/components/%s.rb",
+\   "alternate": "app/components/%s.html.slim",
+\   "rubyAction": ["renders_many", "renders_one", "with_content_areas", "with_collection_parameter" ],
+\   "rubyHelper": ["helpers" ],
+\   "template":
+\    ["class {camelcase|capitalize|colons} < ViewComponent::Base",
+\     "  def initialize(current_user:)",
+\     "    @current_user = current_user",
+\     "  end",
+\     "end"]
+\ },
 \ "app/serializers/*_serializer.rb": {
 \   "command": "serializer",
 \   "affinity": "model",
@@ -26,11 +39,14 @@ let g:rails_projections = {
 \   "template":
 \   "ActiveAdmin.register %S do\n\n  # form do |f|\n   # f.inputs do\n   # end\n   # f.actions\n  # end\n\n  #menu parent: '', label: ''\n\n  # index do\n  #default_actions\n  # end\n\nend\n"
 \ },
-\ "app/javascript/*.js": {
+\ "app/javascript/packs/*.js": {
 \   "command": "pack"
 \ },
+\ "app/javascript/*.js": {
+\   "command": "js"
+\ },
 \ "app/javascript/*.vue": {
-\   "command": "vcomponent",
+\   "command": "vue",
 \   "template": "<template lang='pug'>\n  div\n</template>\n<script>\n\nexport default {\n  computed: {}\n};\n</script>\n<style lang='scss'>\n</style>"
 \ },
 \ "config/locales/*de.yml": { "alternate": "%sen.yml" },
