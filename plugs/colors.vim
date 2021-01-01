@@ -2,7 +2,7 @@
 " Colorschemes
 "
 Plug 'xolox/vim-misc'
-" Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-colorscheme-switcher'
 " :RandomColorscheme
 Plug 'flazz/vim-colorschemes'
 
@@ -16,3 +16,4 @@ Plug 'tomasiser/vim-code-dark'
 " Plug 'gosukiwi/vim-atom-dark'
 " Plug 'nice/sweater'
 " Plug 'nemesit/vim-colors-fukurokujopro'
+

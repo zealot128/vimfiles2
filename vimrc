@@ -1,5 +1,22 @@
 source ~/.vim/Plugfile
 
+set background=dark
+" colorscheme FukurokujoPro
+" colorscheme codedark
+" colorscheme seoul256
+" colorscheme hybrid
+let g:airline_theme = 'onedark'
+" colorscheme atom-dark-256
+" colorscheme spacegray
+" colorscheme fu
+colorscheme obsidian
+" colorscheme lucius
+" colorscheme Monokai
+" colorscheme Tomorrow-Night
+" colorscheme tender
+" colorscheme atom
+
+
 if has('nvim')
   set t_8f=<t_8f>  " Needed in tmux
   set t_8b=^[[48;2;%lu;%lu;%lum  " Ditto
@@ -71,29 +88,6 @@ endif
 "   set relativenumber
 " endif
 
-
-" ----------------------------------------------------------------------------
-"  syntax, highlighting and spelling
-" ----------------------------------------------------------------------------
-" let g:solarized_termcolors=256
-" set t_Co=256
-set background=dark
-" colorscheme FukurokujoPro
-" colorscheme codedark
-
-" colorscheme seoul256
-colorscheme hybrid
-let g:airline_theme = 'onedark'
-" colorscheme atom-dark-256
-" colorscheme spacegray
-" colorscheme fu
-" colorscheme obsidian
-
-" colorscheme lucius
-
-" colorscheme Monokai
-" colorscheme Tomorrow-Night
-" colorscheme tender
 
 "set colorcolumn=80    " display a line in column 80 to show you
                       " when to line break.
@@ -232,7 +226,6 @@ endif
 "  mapping
 " ----------------------------------------------------------------------------
 map Q <Nop>
-map K 5k
 nmap <F1> <Esc>
 nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 nnoremap <silent> <F6> :%g/^\s*#\\|^$/d<CR>
@@ -340,6 +333,10 @@ au BufNewFile,BufRead *.sql setf pgsql
 
 " make gf work great in Webpacker Rails JS files
 au BufNewFile,BufRead *app/javascript/*.js
+      \ setl path+=app/javascript/,node_modules |
+      \ setl isfname+=@-@ |
+      \ setl suffixesadd+=.vue,.json,.scss,.svelte
+au BufNewFile,BufRead *app/javascript/*.ts
       \ setl path+=app/javascript/,node_modules |
       \ setl isfname+=@-@ |
       \ setl suffixesadd+=.vue,.json,.scss,.svelte

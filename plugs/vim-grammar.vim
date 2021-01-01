@@ -67,3 +67,7 @@ Plug 'tpope/vim-eunuch'
     " :Locate: Run locate and load the results into the quickfix list.
     " :SudoWrite: Write a privileged file with sudo.
     " :W: Write every open window. Handy for kicking off tools like guard.
+
+" let g:matchup_matchparen_offscreen = 0
+" Plug 'andymass/vim-matchup'
+

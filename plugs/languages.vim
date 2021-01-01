@@ -5,7 +5,7 @@
 " Plug 'vim-ruby/vim-ruby'
 Plug 'elzr/vim-json'
 " Lightweight support for Ruby's Plugr
-" Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-bundler'
     " :Plug, which wraps bundle.
     " An internalized version of bundle open: :Bopen (and :Bsplit, :Btabedit, etc.).
     " 'path' and 'tags' are automatically altered to include all gems from your bundle. (Generate those tags with gem-ctags!)
@@ -19,8 +19,8 @@ Plug 'elzr/vim-json'
 " Moving to an element, given the path ( :YamlGoToKey )
 Plug 'lmeijvogel/vim-yaml-helper'
 let g:vim_yaml_helper#always_get_root = 0
-let g:vim_yaml_helper#auto_display_path = 1
-nmap <C-g> :YamlGoToParent<CR>
+let g:vim_yaml_helper#auto_display_path = 0
+" nmap <C-g> :YamlGoToParent<CR>
 
 hi IndentGuidesOdd  ctermbg=236
 hi IndentGuidesEven  ctermbg=234
@@ -41,13 +41,16 @@ Plug 'tpope/vim-rails'
 Plug 'exu/pgsql.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'ecomba/vim-ruby-refactoring'
+" Typescript
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'pearofducks/ansible-vim'
 
-let g:polyglot_disabled = ['slim', 'yaml', 'vue']
+let g:polyglot_disabled = ['slim', 'yaml', 'vue', 'typescript', 'svelte', 'ruby', 'jina', 'j2', 'jinja2']
 Plug 'sheerun/vim-polyglot'
 " Plug 'pangloss/vim-javascript'
 Plug 'hsanson/vim-android'
 Plug 'posva/vim-vue'
-Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'hail2u/vim-css3-syntax'
 
 " Windows Powershell

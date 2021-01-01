@@ -106,6 +106,7 @@ let g:rg_command = 'rg --no-messages --vimgrep'
 Plug 'jremmen/vim-ripgrep'
 
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 

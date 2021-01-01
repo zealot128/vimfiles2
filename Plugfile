@@ -5,7 +5,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall
 endif
 
-
 if !has('nvim')
   " Check if RVM is used -> Don't use multithreads
   redir => version_output
@@ -35,4 +34,5 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 
 call plug#end()
+
 " vim: ft=vim
