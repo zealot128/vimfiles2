@@ -23,6 +23,14 @@ Plug 'kana/vim-textobj-line'
 Plug 'thinca/vim-textobj-between'
   " af<char>
 
+let g:splitjoin_ruby_curly_braces = 0
+let g:splitjoin_ruby_hanging_args = 0
+let g:splitjoin_ruby_do_block_split = 0
+Plug 'AndrewRadev/splitjoin.vim'
+  " gS
+  " gJ
+
+
 Plug 'tommcdo/vim-exchange'
 " cx  On the first use, define the first {motion} to exchange. On the second use, define the second {motion} and perform the exchange.
 " cxx Like cx, but use the current line.

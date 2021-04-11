@@ -10,10 +10,13 @@ let g:ale_fixers = {
       \   'ruby': ['rubocop'],
       \   'terraform': ['terraform'],
       \   'vue': ['eslint', 'prettier'],
+      \   'svelte': ['eslint', 'prettier'],
       \}
 let g:ale_linters = {
+      \   'ruby': ['brakeman', 'ruby', 'solargraph', 'rubocop'],
       \   'terraform': ['terraform'],
       \   'javascript': ['eslint'],
+      \   'svelte': ['eslint', 'prettier'],
       \   'html': [],
       \}
 
@@ -55,7 +58,7 @@ function! s:show_documentation()
   if &filetype == 'vim'
     execute 'h '.expand('<cword>')
   else
-    call CocAction('doHover')
+    call CocActionAsync('doHover')
   endif
 endfunction
 

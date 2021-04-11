@@ -55,3 +55,31 @@ snippet vbasepug
 
 snippet vimport
 	import ${1:New} from './components/$1';
+
+snippet vbasets
+	<template lang="pug">
+	div
+	</template>
+
+	<script lang='ts'>
+	import Vue, { PropType } from "vue"
+
+	export default Vue.extend({
+		components: {
+		},
+		props: {
+			value: { type: Array as PropType<string[]>, required: true },
+		},
+		data() {
+			return {}
+		},
+		computed: {
+		},
+		methods: {
+		},
+	})
+	</script>
+
+	<style scoped>
+	</style>
+

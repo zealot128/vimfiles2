@@ -47,6 +47,58 @@ Plug 'pearofducks/ansible-vim'
 
 let g:polyglot_disabled = ['slim', 'yaml', 'vue', 'typescript', 'svelte', 'ruby', 'jina', 'j2', 'jinja2']
 Plug 'sheerun/vim-polyglot'
+
+
+let g:ruby_heredoc_syntax_filetypes = {
+      \ "graphql" : {
+      \   "start" : "GQL",
+      \},
+      \ "javascript" : {
+      \   "start" : "JS",
+      \},
+      \ "sql" : {
+      \   "start" : "SQL",
+      \},
+      \ "html" : {
+      \   "start" : "HTML",
+      \},
+      \ "xml" : {
+      \   "start" : "XML",
+      \},
+      \}
+
+" and this one
+let g:context_filetype#filetypes = {
+\ 'ruby' : [
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsJS',
+\     'end' : '^\s*\zsJS$',
+\     'filetype' : 'javascript',
+\   },
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsHTML',
+\     'end' : '^\s*\zsHTML$',
+\     'filetype' : 'html',
+\   },
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsXML',
+\     'end' : '^\s*\zsXML$',
+\     'filetype' : 'xml',
+\   },
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsSQL',
+\     'end' : '^\s*\zsSQL$',
+\     'filetype' : 'sql',
+\   },
+\   {
+\     'start' : '\%(\%(class\s*\|\%([]})".]\|::\)\)\_s*\|\w\)\@<!<<[-~]\=\zsGQL',
+\     'end' : '^\s*\zsGQL$',
+\     'filetype' : 'graphql',
+\   },
+\ ]
+\}
+
+Plug 'joker1007/vim-ruby-heredoc-syntax'
 " Plug 'pangloss/vim-javascript'
 Plug 'hsanson/vim-android'
 Plug 'posva/vim-vue'
