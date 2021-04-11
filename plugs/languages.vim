@@ -2,6 +2,7 @@
 "  LANGUAGE / FRAMEWORK Support
 " -----------------------------------------------------
 
+Plug 'pocke/rbs'
 " Plug 'vim-ruby/vim-ruby'
 Plug 'elzr/vim-json'
 " Lightweight support for Ruby's Plugr
@@ -17,9 +18,9 @@ Plug 'tpope/vim-bundler'
 " Moving to the parent node ( :YamlGoToParent ),
 " Getting the full path to the current element ( :YamlGetFullPath ),
 " Moving to an element, given the path ( :YamlGoToKey )
-Plug 'lmeijvogel/vim-yaml-helper'
-let g:vim_yaml_helper#always_get_root = 0
-let g:vim_yaml_helper#auto_display_path = 0
+" Plug 'lmeijvogel/vim-yaml-helper'
+" let g:vim_yaml_helper#always_get_root = 0
+" let g:vim_yaml_helper#auto_display_path = 0
 " nmap <C-g> :YamlGoToParent<CR>
 
 hi IndentGuidesOdd  ctermbg=236
@@ -45,7 +46,8 @@ Plug 'ecomba/vim-ruby-refactoring'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'pearofducks/ansible-vim'
 
-let g:polyglot_disabled = ['slim', 'yaml', 'vue', 'typescript', 'svelte', 'ruby', 'jina', 'j2', 'jinja2']
+let g:polyglot_disabled = ['slim', 'yaml', 'vue', 'typescript', 'svelte', 'ruby', 'jina', 'j2', 'jinja2', 'elixir', 'exs']
+Plug 'elixir-editors/vim-elixir'
 Plug 'sheerun/vim-polyglot'
 
 

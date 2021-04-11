@@ -1,19 +1,21 @@
 {
+  "sql.database": "postgresql",
   "suggest.autoTrigger": "always",
   "solargraph.checkGemVersion": false,
   "vetur.validation.interpolation": false,
   "snippets.loadFromExtensions": false,
   "suggest.minTriggerInputLength": 1,
   "suggest.noselect": false,
-  "solargraph.checkGemVersion": false,
-  "coc.preferences.extensionUpdateCheck":"never",
+  "coc.preferences.extensionUpdateCheck": "never",
   "coc.source.file.triggerCharacters": [
     "/"
   ],
   "solargraph.trace.server": "messages",
   "solargraph.useBundler": true,
   "solargraph.completion": true,
-  "solargraph.hover": false,
+  "solargraph.hover": true,
   "javascript.suggest.enabled": false,
-  "python.linting.pylintArgs": ["--extension-pkg-whitelist=cv2"]
+  "python.linting.pylintArgs": [
+    "--extension-pkg-whitelist=cv2"
+  ]
 }

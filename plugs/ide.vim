@@ -2,7 +2,7 @@
 " IDE Extensions
 " ---------------------------------------------
 
-Plug 'wfxr/minimap.vim'
+" Plug 'wfxr/minimap.vim'
 
 
 " Project wide sarch&replace with gui
@@ -110,3 +110,6 @@ let g:rainbow_active = 1
 
 " Tmux :TYank -> Copy to tmux, :TPut -> Paste from tmux
 Plug 'tpope/vim-tbone'
+
+" :TableModeToggle
+Plug 'dhruvasagar/vim-table-mode'
