@@ -318,6 +318,10 @@ autocmd BufRead,BufNewFile vhost.conf set filetype=apache
 autocmd BufRead,BufNewFile .bash_aliases set filetype=sh
 autocmd BufRead,BufNewFile bash_aliases set filetype=sh
 autocmd BufRead,BufNewFile .tmux.conf set filetype=sh
+augroup inky-slim
+  autocmd BufRead,BufNewFile *.inky-slim set filetype=slim
+  autocmd Syntax slim syn keyword htmlTagName container wrapper row button spacer callout menu item
+augroup END
 autocmd BufRead,BufNewFile vhost_ssl.conf set filetype=apache
 autocmd BufRead,BufNewFile *.arb set filetype=ruby
 autocmd BufRead,BufNewFile *.rabl set filetype=ruby
