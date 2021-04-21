@@ -3,7 +3,7 @@
 " -----------------------------------------------------
 
 Plug 'pocke/rbs'
-" Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby'
 Plug 'elzr/vim-json'
 " Lightweight support for Ruby's Plugr
 Plug 'tpope/vim-bundler'

@@ -113,3 +113,5 @@ Plug 'tpope/vim-tbone'
 
 " :TableModeToggle
 Plug 'dhruvasagar/vim-table-mode'
+
+Plug 'preservim/nerdtree'
