@@ -16,7 +16,7 @@ let g:rails_projections = {
 \   "command": "component",
 \   "test": "spec/components/%s.rb",
 \   "alternate": "app/components/%s.html.slim",
-\   "rubyAction": ["renders_many", "renders_one", "with_content_areas", "with_collection_parameter" ],
+\   "rubyAction": ["renders_many", "renders_one", "with_content_areas", "with_collection_parameter", "tag", "content_tag" ],
 \   "rubyHelper": ["helpers" ],
 \   "template":
 \    ["class {camelcase|capitalize|colons} < ViewComponent::Base",

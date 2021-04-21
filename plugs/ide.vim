@@ -94,6 +94,16 @@ Plug 'jremmen/vim-ripgrep'
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
+" Airline slow
+let g:airline_extensions = []
+if ! has('gui_running')
+  set ttimeoutlen=10
+  augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+  augroup END
+endif
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -114,4 +124,23 @@ Plug 'tpope/vim-tbone'
 " :TableModeToggle
 Plug 'dhruvasagar/vim-table-mode'
 
-Plug 'preservim/nerdtree'
+let g:coc_explorer_global_presets = {
+\  'right': {
+\     'position': 'right',
+\    'toggle': v:false,
+\    'focus': v:false,
+\    'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1][modified][readonly] [linkIcon & 1][link growRight 1 omitCenter 5][git | 2]',
+\  }
+\}
+nnoremap <silent> <C-e> :CocCommand explorer --preset right<CR>
+
+function! s:enter_explorer()
+  if &filetype != 'coc-explorer'
+    CocCommand explorer --preset right<CR>
+    " statusline
+    setl statusline=coc-explorer
+  endif
+endfunction
+
+" autocmd BufEnter * if (winnr("$") == 1 && &filetype != 'coc-explorer') | exe ':CocCommand explorer --preset right' | endif
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

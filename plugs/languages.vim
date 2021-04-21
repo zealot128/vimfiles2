@@ -18,9 +18,9 @@ Plug 'tpope/vim-bundler'
 " Moving to the parent node ( :YamlGoToParent ),
 " Getting the full path to the current element ( :YamlGetFullPath ),
 " Moving to an element, given the path ( :YamlGoToKey )
-" Plug 'lmeijvogel/vim-yaml-helper'
-" let g:vim_yaml_helper#always_get_root = 0
-" let g:vim_yaml_helper#auto_display_path = 0
+Plug 'lmeijvogel/vim-yaml-helper'
+let g:vim_yaml_helper#always_get_root = 0
+let g:vim_yaml_helper#auto_display_path = 0
 " nmap <C-g> :YamlGoToParent<CR>
 
 hi IndentGuidesOdd  ctermbg=236

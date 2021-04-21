@@ -10,12 +10,19 @@
   "coc.source.file.triggerCharacters": [
     "/"
   ],
-  "solargraph.trace.server": "messages",
   "solargraph.useBundler": true,
   "solargraph.completion": true,
   "solargraph.hover": true,
   "javascript.suggest.enabled": false,
   "python.linting.pylintArgs": [
     "--extension-pkg-whitelist=cv2"
-  ]
+  ],
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
+  }
 }
