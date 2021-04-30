@@ -322,6 +322,9 @@ augroup inky-slim
   autocmd BufRead,BufNewFile *.inky-slim set filetype=slim
   autocmd Syntax slim syn keyword htmlTagName container wrapper row button spacer callout menu item columns
 augroup END
+augroup component-slim
+  autocmd BufRead,BufNewFile */components/**/*.slim syn keyword rubyKeyword render content
+augroup END
 autocmd BufRead,BufNewFile vhost_ssl.conf set filetype=apache
 autocmd BufRead,BufNewFile *.arb set filetype=ruby
 autocmd BufRead,BufNewFile *.rabl set filetype=ruby

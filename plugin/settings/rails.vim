@@ -15,15 +15,21 @@ let g:rails_projections = {
 \ "app/components/*.rb": {
 \   "command": "component",
 \   "test": "spec/components/%s.rb",
+\   "related": "app/components/{}.html.slim",
 \   "alternate": "app/components/%s.html.slim",
 \   "rubyAction": ["renders_many", "renders_one", "with_content_areas", "with_collection_parameter", "tag", "content_tag" ],
-\   "rubyHelper": ["helpers" ],
+\   "rubyHelper": ["helpers"],
 \   "template":
 \    ["class {camelcase|capitalize|colons} < ViewComponent::Base",
 \     "  def initialize(current_user:)",
 \     "    @current_user = current_user",
 \     "  end",
 \     "end"]
+\ },
+\ "app/components/*.html.slim": {
+\   "command": "cview",
+\   "related": "app/components/{}.rb",
+\   "rubyAction": ["content"],
 \ },
 \ "app/serializers/*_serializer.rb": {
 \   "command": "serializer",
