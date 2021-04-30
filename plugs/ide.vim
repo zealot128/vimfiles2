@@ -94,6 +94,7 @@ Plug 'jremmen/vim-ripgrep'
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
+let g:airline_highlighting_cache=1
 " Airline slow
 let g:airline_extensions = []
 if ! has('gui_running')

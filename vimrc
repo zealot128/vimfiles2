@@ -351,19 +351,19 @@ au BufNewFile,BufRead *.sql setf pgsql
 au BufNewFile,BufRead *app/javascript/*.js
       \ setl path+=app/javascript/,node_modules |
       \ setl isfname+=@-@ |
-      \ setl suffixesadd+=.vue,.json,.scss,.svelte
+      \ setl suffixesadd+=.vue,.json,.scss,.svelte,.ts
 au BufNewFile,BufRead *app/javascript/*.ts
       \ setl path+=app/javascript/,node_modules |
       \ setl isfname+=@-@ |
-      \ setl suffixesadd+=.vue,.json,.scss,.svelte
+      \ setl suffixesadd+=.vue,.json,.scss,.svelte,.ts
 au BufNewFile,BufRead *app/javascript/*.vue
       \ setl path+=app/javascript/,node_modules |
       \ setl isfname+=@-@ |
-      \ setl suffixesadd+=.js,.json,.scss
+      \ setl suffixesadd+=.js,.json,.scss,.ts
 au BufNewFile,BufRead *app/javascript/*.svelte
       \ setl path+=app/javascript/,node_modules |
       \ setl isfname+=@-@ |
-      \ setl suffixesadd+=.js,.json,.scss
+      \ setl suffixesadd+=.js,.json,.scss,.ts
 
 au BufNewFile,BufRead *app/javascript/*.scss
       \ setl path+=app/javascript/,node_modules |
